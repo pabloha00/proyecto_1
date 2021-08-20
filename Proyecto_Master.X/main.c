@@ -1,8 +1,8 @@
 /*
  * File:   main.c
- * Author: Pablo
+ * Author: Pablo Herrarte
  * Ejemplo de uso de I2C Master
- * Created on 17 de febrero de 2020, 10:32 AM
+ * Created on 19 de agosto de 2021
  */
 //*****************************************************************************
 // Palabra de configuraci n
@@ -40,13 +40,13 @@
 // Definici n de variables
 //*****************************************************************************
 #define _XTAL_FREQ 8000000
-uint8_t PARKH;
+uint8_t PARKH;  //Parqueos habilitados
 uint8_t NUM;
 uint8_t BASURA;
-uint8_t DIA;
-uint8_t HORA;
-uint8_t MIN;
-uint8_t C1;
+uint8_t DIA;    //Dia de la semana para habilitar el motor servo
+uint8_t HORA;   //Hora para las luces del parqueo
+uint8_t MIN;    //Minutos 
+uint8_t C1;     //
 uint8_t C2;
 uint8_t C3;
 uint8_t UH;
@@ -70,12 +70,12 @@ void main(void) {
     Lcd_Init(); //Inicialización de 8 bits para LCD
     while(1){
         Lcd_Set_Cursor(1,1);    //Cursor en primera línea
-        Lcd_Write_String(conver1()); //Escribir S1 S2 S3
+        Lcd_Write_String(conver1()); //Escribir Día hora y minutos
         Lcd_Set_Cursor(2,1);    //Cursor en segunda línea
-        Lcd_Write_String(conver());    //Escribir los datos para el LCD con esa función
-        LECT1();
+        Lcd_Write_String(conver());    //Escribir los datos de parqueos hábiles
+        LECT1();        //Conversión de datos
         
-        I2C_Master_Start();
+        I2C_Master_Start();     //escribe el dato de parqueos hábiles del pic que controla los parqueos
         I2C_Master_Write(0x50);
         I2C_Master_Write(0);
         I2C_Master_Stop();
@@ -87,7 +87,7 @@ void main(void) {
         I2C_Master_Stop();
         __delay_ms(10);
         
-        I2C_Master_Start();
+        I2C_Master_Start();     //Escribe las horas del sensor DS3231
         I2C_Master_Write(0xD0);
         I2C_Master_Write(0x02);
         I2C_Master_Stop();
@@ -99,7 +99,7 @@ void main(void) {
         I2C_Master_Stop();
         __delay_ms(10);
         
-        I2C_Master_Start();
+        I2C_Master_Start();     //Escribe el día del sensor DS3231
         I2C_Master_Write(0xD0);
         I2C_Master_Write(0x03);
         I2C_Master_Stop();
@@ -111,7 +111,7 @@ void main(void) {
         I2C_Master_Stop();
         __delay_ms(10);
         
-        I2C_Master_Start();
+        I2C_Master_Start();     //Escribe los minutos
         I2C_Master_Write(0xD0);
         I2C_Master_Write(0x01);
         I2C_Master_Stop();
@@ -141,7 +141,7 @@ void setup(void){
     osc_config(8);
     I2C_Master_Init(100000);        // Inicializar Comuncaci n I2C
     
-    I2C_Master_Start();
+    I2C_Master_Start();     //Escritura de datos iniciales
         I2C_Master_Write(0xD0);
         I2C_Master_Write(0x02);
         I2C_Master_Write(0x23);
@@ -194,7 +194,7 @@ const char* conver(void){   //Datos que recivirá la LCD
     temporal[8] = 0x3A; //:
     temporal[9] = 0X20; //SPC
     temporal[10] = 0x30;
-    temporal[11] = NUM;
+    temporal[11] = NUM; //Parqueos hábiles que recibe del PIC esclavo de parqueos
     temporal[12] = 0x20;
     temporal[13] = 0x20;
     temporal[14] = 0x20;
@@ -222,9 +222,9 @@ const char* conver1(void){
     temporal[15] = 0x20;
     return temporal;
 }
-void LECT1(void){
-    NUM = num_ascii(PARKH);
-    if (DIA == 1){
+void LECT1(void){           //Conversión de datos para mostrar en pantalla LCD
+    NUM = num_ascii(PARKH); 
+    if (DIA == 1){          //Escritura del día
         C1 = 0x4C;
         C2 = 0x75;
         C3 = 0x6E;
@@ -259,7 +259,7 @@ void LECT1(void){
         C2 = 0x6F;
         C3 = 0x6D;
     }
-    if (HORA<10){
+    if (HORA<10){       //Escritura de la hora
         DH = 0x30;
         UH = num_ascii(HORA);
     }
@@ -273,7 +273,7 @@ void LECT1(void){
         con = HORA-32;
         UH = num_ascii(con);
     }
-    if (MIN<10){
+    if (MIN<10){            //Escritura de los minutos
         DM = 0x30;
         UM = num_ascii(MIN);
     }

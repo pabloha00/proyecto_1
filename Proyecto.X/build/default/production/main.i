@@ -2789,7 +2789,7 @@ void main(void)
 
     while(1)
     {
-        PORTA = PARQUEO;
+
     }
 
 }

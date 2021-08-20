@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------------------
 Archivo: mainsproject.s
 Microcontrolador: PIC16F887
-Autor: Andy Bonilla
+Autor: Andy Bonilla y Pablo Herrarte
 Compilador: pic-as (v2.30), MPLABX v5.45
     
 Programa: pic para sensores de proyecto 1 de Electronica Digital 2
@@ -64,7 +64,7 @@ void setup(void);
 void __interrupt() isr(void) //funcion de interrupciones
 {
     //-------INTERRUPCION POR BOTONAZO
-    if (INTCONbits.RBIF)
+    if (INTCONbits.RBIF)    //Va a estar conectado al sensor de proximidad
     {
         INTCONbits.RBIF = 0;
         cc=0;
@@ -98,7 +98,7 @@ void __interrupt() isr(void) //funcion de interrupciones
         PARQUEO = cc;
         cc = 0;               
     }
-    if(PIR1bits.SSPIF == 1){ 
+    if(PIR1bits.SSPIF == 1){    //Le va a mandar la cantidad de parqueos habilitados al master
 
         SSPCONbits.CKP = 0;
        
@@ -141,7 +141,7 @@ void main(void)
     
     while(1)
     {
-        PORTA = PARQUEO;
+        //PORTA = PARQUEO;    
     }
    
 }

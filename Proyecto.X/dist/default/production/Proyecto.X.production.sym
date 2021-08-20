@@ -1,7 +1,7 @@
 _z 78 0 COMMON 1
 _BF 4A0 0 ABS 0
 _cc 77 0 COMMON 1
-__S0 13F 0 ABS 0
+__S0 13B 0 ABS 0
 __S1 7B 0 ABS 0
 __S2 0 0 ABS 0
 __S3 0 0 ABS 0
@@ -72,7 +72,7 @@ __Lcode 0 0 ABS 0
 saved_w 7E 0 ABS 0
 __Hinit C 0 CODE 0
 __Linit C 0 CODE 0
-__end_of_main 13F 0 CODE 0
+__end_of_main 13B 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 I2C_Slave_Init@address 73 0 COMMON 1
@@ -112,7 +112,7 @@ __end_of__initialization 14 0 CODE 0
 _SSPSTATbits 94 0 ABS 0
 __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
-__Hspace_0 13F 0 ABS 0
+__Hspace_0 13B 0 ABS 0
 __Lspace_0 0 0 ABS 0
 __end_of_isr B2 0 CODE 0
 __Hspace_1 7B 0 ABS 0
@@ -156,11 +156,11 @@ __pmaintext 132 0 CODE 0
 __initialization F 0 CODE 0
 %segments
 reset_vec 0 5 CODE 0 0
-intentry 8 27D CODE 8 0
+intentry 8 275 CODE 8 0
 cstackCOMMON 70 7A COMMON 70 1
 %locals
 dist/default/production\Proyecto.X.production.o
-C:\Users\user\AppData\Local\Temp\xcAsfm0.s
+C:\Users\user\AppData\Local\Temp\xcAscak.s
 818 F 0 CODE 0
 821 F 0 CODE 0
 844 F 0 CODE 0
@@ -174,7 +174,8 @@ C:\Users\user\AppData\Local\Temp\xcAsfm0.s
 main.c
 137 132 0 CODE 0
 140 132 0 CODE 0
-144 137 0 CODE 0
+142 137 0 CODE 0
+145 137 0 CODE 0
 151 E9 0 CODE 0
 154 E9 0 CODE 0
 155 EC 0 CODE 0

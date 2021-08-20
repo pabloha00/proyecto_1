@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\user\AppData\Local\Temp\xcAsfm0.o
+$C:\Users\user\AppData\Local\Temp\xcAscak.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -21,7 +21,7 @@ text1 CODE 0 E9 E9 2F 2
 text2 CODE 0 B2 B2 37 2
 text3 CODE 0 118 118 1A 2
 text4 CODE 0 18 18 9A 2
-maintext CODE 0 132 132 D 2
+maintext CODE 0 132 132 9 2
 cstackCOMMON COMMON 1 70 70 6 1
 intentry CODE 0 4 4 8 2
 bssCOMMON COMMON 1 76 76 5 1
@@ -41,13 +41,13 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 13F-1FFF 2
+CONST 13B-1FFF 2
 ENTRY 3-3 2
-ENTRY 13F-1FFF 2
+ENTRY 13B-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 13F-1FFF 2
+CODE 13B-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -55,9 +55,9 @@ SFR3 180-18F 1
 COMMON 7B-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 13F-1FFF 2
+STRCODE 13B-1FFF 2
 STRING 3-3 2
-STRING 13F-1FFF 2
+STRING 13B-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -72,129 +72,130 @@ STRING 13F-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Proyecto.X.production.o
-F cinit CODE >818:C:\Users\user\AppData\Local\Temp\xcAsfm0.s
-F cinit CODE >821:C:\Users\user\AppData\Local\Temp\xcAsfm0.s
-F cinit CODE >844:C:\Users\user\AppData\Local\Temp\xcAsfm0.s
-10 cinit CODE >845:C:\Users\user\AppData\Local\Temp\xcAsfm0.s
-11 cinit CODE >846:C:\Users\user\AppData\Local\Temp\xcAsfm0.s
-12 cinit CODE >847:C:\Users\user\AppData\Local\Temp\xcAsfm0.s
-13 cinit CODE >848:C:\Users\user\AppData\Local\Temp\xcAsfm0.s
-14 cinit CODE >854:C:\Users\user\AppData\Local\Temp\xcAsfm0.s
-14 cinit CODE >856:C:\Users\user\AppData\Local\Temp\xcAsfm0.s
-15 cinit CODE >857:C:\Users\user\AppData\Local\Temp\xcAsfm0.s
-4 intentry CODE >64:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-18 text4 CODE >64:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-18 text4 CODE >67:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-1C text4 CODE >69:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-1D text4 CODE >70:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-1E text4 CODE >71:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-24 text4 CODE >73:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-25 text4 CODE >74:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-25 text4 CODE >75:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-29 text4 CODE >77:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-2D text4 CODE >78:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-2E text4 CODE >80:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-32 text4 CODE >82:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-33 text4 CODE >83:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-33 text4 CODE >84:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-37 text4 CODE >86:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-3B text4 CODE >87:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-3C text4 CODE >89:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-40 text4 CODE >91:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-41 text4 CODE >92:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-41 text4 CODE >93:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-45 text4 CODE >95:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-49 text4 CODE >96:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-4A text4 CODE >98:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-4E text4 CODE >99:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-4F text4 CODE >101:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-55 text4 CODE >103:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-56 text4 CODE >105:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-5E text4 CODE >106:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-62 text4 CODE >107:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-63 text4 CODE >108:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-64 text4 CODE >109:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-65 text4 CODE >112:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-6F text4 CODE >113:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-75 text4 CODE >114:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-76 text4 CODE >115:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-77 text4 CODE >116:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-7D text4 CODE >117:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-83 text4 CODE >118:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-87 text4 CODE >120:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-90 text4 CODE >121:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-96 text4 CODE >122:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-99 text4 CODE >123:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-9D text4 CODE >124:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-9E text4 CODE >125:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-A2 text4 CODE >126:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-A8 text4 CODE >127:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-A8 text4 CODE >129:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-AB text4 CODE >133:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-118 text3 CODE >93:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-119 text3 CODE >95:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-11D text3 CODE >96:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-121 text3 CODE >97:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-125 text3 CODE >98:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-127 text3 CODE >99:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-128 text3 CODE >100:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-129 text3 CODE >101:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-12A text3 CODE >102:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-12B text3 CODE >103:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-12E text3 CODE >104:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-131 text3 CODE >105:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\I2C.c
-B2 text2 CODE >17:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-B3 text2 CODE >19:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-B4 text2 CODE >22:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-BA text2 CODE >23:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-BB text2 CODE >24:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-BC text2 CODE >27:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-C2 text2 CODE >28:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-C3 text2 CODE >29:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-C4 text2 CODE >32:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-CA text2 CODE >33:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-CB text2 CODE >34:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-CC text2 CODE >37:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-D0 text2 CODE >38:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-D1 text2 CODE >39:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-D2 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-D7 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-DC text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-DF text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-E2 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-E5 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-E8 text2 CODE >43:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\Osc_config.c
-E9 text1 CODE >151:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-E9 text1 CODE >154:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-EC text1 CODE >155:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-ED text1 CODE >157:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-F0 text1 CODE >158:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-F2 text1 CODE >159:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-F3 text1 CODE >160:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-F4 text1 CODE >161:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-F5 text1 CODE >164:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-F8 text1 CODE >165:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-F9 text1 CODE >166:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-FA text1 CODE >167:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-FB text1 CODE >168:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-FC text1 CODE >170:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-102 text1 CODE >172:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-105 text1 CODE >173:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-106 text1 CODE >174:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-107 text1 CODE >175:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-108 text1 CODE >176:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-109 text1 CODE >177:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-10A text1 CODE >178:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-10C text1 CODE >182:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-10D text1 CODE >183:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-10E text1 CODE >184:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-10F text1 CODE >185:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-110 text1 CODE >186:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-111 text1 CODE >187:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-117 text1 CODE >188:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-132 maintext CODE >137:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-132 maintext CODE >140:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
-137 maintext CODE >144:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X\main.c
+F cinit CODE >818:C:\Users\user\AppData\Local\Temp\xcAscak.s
+F cinit CODE >821:C:\Users\user\AppData\Local\Temp\xcAscak.s
+F cinit CODE >844:C:\Users\user\AppData\Local\Temp\xcAscak.s
+10 cinit CODE >845:C:\Users\user\AppData\Local\Temp\xcAscak.s
+11 cinit CODE >846:C:\Users\user\AppData\Local\Temp\xcAscak.s
+12 cinit CODE >847:C:\Users\user\AppData\Local\Temp\xcAscak.s
+13 cinit CODE >848:C:\Users\user\AppData\Local\Temp\xcAscak.s
+14 cinit CODE >854:C:\Users\user\AppData\Local\Temp\xcAscak.s
+14 cinit CODE >856:C:\Users\user\AppData\Local\Temp\xcAscak.s
+15 cinit CODE >857:C:\Users\user\AppData\Local\Temp\xcAscak.s
+4 intentry CODE >64:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+18 text4 CODE >64:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+18 text4 CODE >67:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+1C text4 CODE >69:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+1D text4 CODE >70:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+1E text4 CODE >71:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+24 text4 CODE >73:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+25 text4 CODE >74:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+25 text4 CODE >75:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+29 text4 CODE >77:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+2D text4 CODE >78:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+2E text4 CODE >80:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+32 text4 CODE >82:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+33 text4 CODE >83:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+33 text4 CODE >84:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+37 text4 CODE >86:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+3B text4 CODE >87:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+3C text4 CODE >89:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+40 text4 CODE >91:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+41 text4 CODE >92:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+41 text4 CODE >93:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+45 text4 CODE >95:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+49 text4 CODE >96:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+4A text4 CODE >98:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+4E text4 CODE >99:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+4F text4 CODE >101:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+55 text4 CODE >103:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+56 text4 CODE >105:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+5E text4 CODE >106:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+62 text4 CODE >107:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+63 text4 CODE >108:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+64 text4 CODE >109:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+65 text4 CODE >112:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+6F text4 CODE >113:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+75 text4 CODE >114:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+76 text4 CODE >115:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+77 text4 CODE >116:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+7D text4 CODE >117:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+83 text4 CODE >118:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+87 text4 CODE >120:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+90 text4 CODE >121:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+96 text4 CODE >122:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+99 text4 CODE >123:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+9D text4 CODE >124:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+9E text4 CODE >125:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+A2 text4 CODE >126:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+A8 text4 CODE >127:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+A8 text4 CODE >129:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+AB text4 CODE >133:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+118 text3 CODE >93:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+119 text3 CODE >95:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+11D text3 CODE >96:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+121 text3 CODE >97:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+125 text3 CODE >98:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+127 text3 CODE >99:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+128 text3 CODE >100:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+129 text3 CODE >101:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+12A text3 CODE >102:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+12B text3 CODE >103:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+12E text3 CODE >104:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+131 text3 CODE >105:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
+B2 text2 CODE >17:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+B3 text2 CODE >19:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+B4 text2 CODE >22:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+BA text2 CODE >23:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+BB text2 CODE >24:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+BC text2 CODE >27:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+C2 text2 CODE >28:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+C3 text2 CODE >29:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+C4 text2 CODE >32:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+CA text2 CODE >33:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+CB text2 CODE >34:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+CC text2 CODE >37:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+D0 text2 CODE >38:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+D1 text2 CODE >39:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+D2 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+D7 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+DC text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+DF text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+E2 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+E5 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+E8 text2 CODE >43:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
+E9 text1 CODE >151:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+E9 text1 CODE >154:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+EC text1 CODE >155:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+ED text1 CODE >157:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+F0 text1 CODE >158:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+F2 text1 CODE >159:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+F3 text1 CODE >160:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+F4 text1 CODE >161:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+F5 text1 CODE >164:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+F8 text1 CODE >165:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+F9 text1 CODE >166:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+FA text1 CODE >167:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+FB text1 CODE >168:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+FC text1 CODE >170:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+102 text1 CODE >172:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+105 text1 CODE >173:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+106 text1 CODE >174:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+107 text1 CODE >175:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+108 text1 CODE >176:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+109 text1 CODE >177:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+10A text1 CODE >178:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+10C text1 CODE >182:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+10D text1 CODE >183:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+10E text1 CODE >184:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+10F text1 CODE >185:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+110 text1 CODE >186:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+111 text1 CODE >187:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+117 text1 CODE >188:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+132 maintext CODE >137:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+132 maintext CODE >140:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+137 maintext CODE >142:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+137 maintext CODE >145:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -209,7 +210,7 @@ FC text1 CODE >170:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto.X
 %SYMTAB
 _z 78 0 COMMON 1 bssCOMMON dist/default/production\Proyecto.X.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\Proyecto.X.production.o
-__Hspace_0 13F 0 ABS 0 - -
+__Hspace_0 13B 0 ABS 0 - -
 __Hspace_1 7B 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
@@ -219,19 +220,19 @@ _BF 4A0 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 _cc 77 0 COMMON 1 bssCOMMON dist/default/production\Proyecto.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\Proyecto.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAsfm0.o
+___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAscak.o
 _main 264 0 CODE 0 maintext dist/default/production\Proyecto.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Proyecto.X.production.o
-start 18 0 CODE 0 init C:\Users\user\AppData\Local\Temp\xcAsfm0.o
+start 18 0 CODE 0 init C:\Users\user\AppData\Local\Temp\xcAscak.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfm0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfm0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfm0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfm0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfm0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfm0.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAscak.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAscak.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAscak.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAscak.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAscak.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAscak.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Proyecto.X.production.o
@@ -242,8 +243,8 @@ _BASURA 76 0 COMMON 1 bssCOMMON dist/default/production\Proyecto.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 _OPTION_REG 81 0 ABS 0 - dist/default/production\Proyecto.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAsfm0.o
-___stacklo 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAsfm0.o
+___stackhi 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAscak.o
+___stacklo 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAscak.o
 _I2C_Slave_Init 230 0 CODE 0 text3 dist/default/production\Proyecto.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 _WPUBbits 95 0 ABS 0 - dist/default/production\Proyecto.X.production.o
@@ -256,7 +257,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Proyecto.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAsfm0.o
+___int_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAscak.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -294,7 +295,7 @@ __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\Proyecto.X.production.o
-__S0 13F 0 ABS 0 - -
+__S0 13B 0 ABS 0 - -
 __S1 7B 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
@@ -303,7 +304,7 @@ __end_of_osc_config 1D2 0 CODE 0 text2 dist/default/production\Proyecto.X.produc
 saved_w 7E 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 __end_of_isr 164 0 CODE 0 text4 dist/default/production\Proyecto.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\user\AppData\Local\Temp\xcAsfm0.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\user\AppData\Local\Temp\xcAscak.o
 __pmaintext 264 0 CODE 0 maintext dist/default/production\Proyecto.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
@@ -339,7 +340,7 @@ __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto.X.pr
 _SSPCON2 91 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main 27E 0 CODE 0 maintext dist/default/production\Proyecto.X.production.o
+__end_of_main 276 0 CODE 0 maintext dist/default/production\Proyecto.X.production.o
 osc_config@freq 75 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\Proyecto.X.production.o
@@ -389,7 +390,7 @@ __initialization 1E 0 CODE 0 cinit dist/default/production\Proyecto.X.production
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cstackCOMMON 1 70 70 B 1
-intentry 0 4 8 13B 2
+intentry 0 4 8 137 2
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

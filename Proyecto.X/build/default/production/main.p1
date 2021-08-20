@@ -85,9 +85,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "59 main.c
 [; ;main.c: 59: void setup(void);
 [v _setup `(v ~T0 @X0 0 ef ]
-"166 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
-[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
-"3387
+"3387 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
 [v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
 "3449
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
@@ -107,6 +105,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S60 . . ]
 "1677
 [v _TRISEbits `VS60 ~T0 @X0 0 e@137 ]
+"166
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
 "228
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 "290
@@ -586,9 +586,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "143
 [; ;main.c: 143:     {
 {
-"144
-[; ;main.c: 144:         PORTA = PARQUEO;
-[e = _PORTA _PARQUEO ]
 "145
 [; ;main.c: 145:     }
 }
