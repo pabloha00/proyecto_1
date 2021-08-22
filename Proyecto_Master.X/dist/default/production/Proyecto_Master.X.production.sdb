@@ -39,15 +39,15 @@
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
 "54
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
-"68 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\main.c
+"70 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"131
+"158
 [v _setup setup `(v  1 e 1 0 ]
-"184
+"224
 [v _conver conver `(*.4DCuc  1 e 1 0 ]
-"205
+"245
 [v _conver1 conver1 `(*.4DCuc  1 e 1 0 ]
-"225
+"265
 [v _LECT1 LECT1 `(v  1 e 1 0 ]
 "17 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\Osc_config.c
 [v _osc_config osc_config `(v  1 e 1 0 ]
@@ -55,16 +55,28 @@
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S166 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"245
+[u S175 . 1 `S166 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES175  1 e 1 @6 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S230 . 1 `uc 1 RE0 1 0 :1:0 
+[s S261 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 `uc 1 RE3 1 0 :1:3 
 ]
 "427
-[u S235 . 1 `S230 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES235  1 e 1 @9 ]
+[u S266 . 1 `S261 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES266  1 e 1 @9 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
@@ -89,20 +101,20 @@
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
-[s S196 . 1 `uc 1 SCS 1 0 :1:0 
+[s S227 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1882
-[s S202 . 1 `uc 1 . 1 0 :4:0 
+[s S233 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S207 . 1 `S196 1 . 1 0 `S202 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES207  1 e 1 @143 ]
+[u S238 . 1 `S227 1 . 1 0 `S233 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES238  1 e 1 @143 ]
 "1979
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
 [s S47 . 1 `uc 1 SEN 1 0 :1:0 
@@ -149,31 +161,33 @@
 [v _HORA HORA `uc  1 e 1 0 ]
 "48
 [v _MIN MIN `uc  1 e 1 0 ]
-"49
-[v _C1 C1 `uc  1 e 1 0 ]
 "50
-[v _C2 C2 `uc  1 e 1 0 ]
+[v _C1 C1 `uc  1 e 1 0 ]
 "51
-[v _C3 C3 `uc  1 e 1 0 ]
+[v _C2 C2 `uc  1 e 1 0 ]
 "52
-[v _UH UH `uc  1 e 1 0 ]
+[v _C3 C3 `uc  1 e 1 0 ]
 "53
-[v _DH DH `uc  1 e 1 0 ]
+[v _UH UH `uc  1 e 1 0 ]
 "54
-[v _UM UM `uc  1 e 1 0 ]
+[v _DH DH `uc  1 e 1 0 ]
 "55
-[v _DM DM `uc  1 e 1 0 ]
+[v _UM UM `uc  1 e 1 0 ]
 "56
+[v _DM DM `uc  1 e 1 0 ]
+"57
+[v _CERRADO CERRADO `uc  1 e 1 0 ]
+"58
 [v _con con `uc  1 e 1 0 ]
-"68
+"70
 [v _main main `(v  1 e 1 0 ]
 {
-"127
+"154
 } 0
-"131
+"158
 [v _setup setup `(v  1 e 1 0 ]
 {
-"182
+"222
 } 0
 "17 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\Osc_config.c
 [v _osc_config osc_config `(v  1 e 1 0 ]
@@ -231,19 +245,19 @@
 [v ___lldiv@dividend dividend `ul  1 p 4 4 ]
 "30
 } 0
-"205 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\main.c
+"245 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\main.c
 [v _conver1 conver1 `(*.4DCuc  1 e 1 0 ]
 {
-"206
+"246
 [v conver1@temporal temporal `[16]uc  1 a 16 0 ]
-"224
+"264
 } 0
-"184
+"224
 [v _conver conver `(*.4DCuc  1 e 1 0 ]
 {
-"185
+"225
 [v conver@temporal temporal `[16]uc  1 a 16 0 ]
-"203
+"243
 } 0
 "54 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\LCD.c
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
@@ -299,10 +313,10 @@
 [v Lcd_Port@a a `uc  1 a 1 0 ]
 "5
 } 0
-"225 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\main.c
+"265 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\main.c
 [v _LECT1 LECT1 `(v  1 e 1 0 ]
 {
-"305
+"379
 } 0
 "3 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\ASCII.c
 [v _num_ascii num_ascii `(uc  1 e 1 0 ]

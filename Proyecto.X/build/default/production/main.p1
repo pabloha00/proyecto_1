@@ -683,6 +683,74 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 187:     I2C_Slave_Init(0x50);
 [e ( _I2C_Slave_Init (1 -> -> 80 `i `uc ]
 "188
-[; ;main.c: 188: }
+[; ;main.c: 188:     PORTD = ~PORTB;
+[e = _PORTD -> ~ -> _PORTB `i `uc ]
+"189
+[; ;main.c: 189:     if (PORTB==1 || PORTB==2 || PORTB==4){
+[e $ ! || || == -> _PORTB `i -> 1 `i == -> _PORTB `i -> 2 `i == -> _PORTB `i -> 4 `i 162  ]
+{
+"190
+[; ;main.c: 190:         PARQUEO = 1;
+[e = _PARQUEO -> -> 1 `i `uc ]
+"191
+[; ;main.c: 191:     }
+}
+[e $U 163  ]
+"192
+[; ;main.c: 192:     else if(PORTB==3 || PORTB==5 || PORTB==6){
+[e :U 162 ]
+[e $ ! || || == -> _PORTB `i -> 3 `i == -> _PORTB `i -> 5 `i == -> _PORTB `i -> 6 `i 164  ]
+{
+"193
+[; ;main.c: 193:         PARQUEO = 2;
+[e = _PARQUEO -> -> 2 `i `uc ]
+"194
+[; ;main.c: 194:     }
+}
+[e $U 165  ]
+"195
+[; ;main.c: 195:     else if(PORTB==7){
+[e :U 164 ]
+[e $ ! == -> _PORTB `i -> 7 `i 166  ]
+{
+"196
+[; ;main.c: 196:         PARQUEO = 3;
+[e = _PARQUEO -> -> 3 `i `uc ]
+"197
+[; ;main.c: 197:     }
+}
+[e $U 167  ]
+"198
+[; ;main.c: 198:     else if(PORTB==0){
+[e :U 166 ]
+[e $ ! == -> _PORTB `i -> 0 `i 168  ]
+{
+"199
+[; ;main.c: 199:         PARQUEO = 0;
+[e = _PARQUEO -> -> 0 `i `uc ]
+"200
+[; ;main.c: 200:     }
+}
+[e :U 168 ]
+[e :U 167 ]
+[e :U 165 ]
+[e :U 163 ]
+"201
+[; ;main.c: 201:     PORTDbits.RD3 = 0;
+[e = . . _PORTDbits 0 3 -> -> 0 `i `uc ]
+"202
+[; ;main.c: 202:     PORTDbits.RD4 = 0;
+[e = . . _PORTDbits 0 4 -> -> 0 `i `uc ]
+"203
+[; ;main.c: 203:     PORTDbits.RD5 = 0;
+[e = . . _PORTDbits 0 5 -> -> 0 `i `uc ]
+"204
+[; ;main.c: 204:     PORTDbits.RD6 = 0;
+[e = . . _PORTDbits 0 6 -> -> 0 `i `uc ]
+"205
+[; ;main.c: 205:     PORTDbits.RD7 = 0;
+[e = . . _PORTDbits 0 7 -> -> 0 `i `uc ]
+"206
+[; ;main.c: 206: }
 [e :UE 161 ]
 }

@@ -185,6 +185,24 @@ void setup(void)
     INTCONbits.RBIF=0;          //se  apaga bandera IntOnChange B
     PARQUEO = 0;
     I2C_Slave_Init(0x50);   
+    PORTD = ~PORTB;
+    if (PORTB==1 || PORTB==2 || PORTB==4){
+        PARQUEO = 1;
+    }
+    else if(PORTB==3 || PORTB==5 || PORTB==6){
+        PARQUEO = 2;
+    }
+    else if(PORTB==7){
+        PARQUEO = 3;
+    }
+    else if(PORTB==0){
+        PARQUEO = 0;
+    }
+    PORTDbits.RD3 = 0;
+    PORTDbits.RD4 = 0;
+    PORTDbits.RD5 = 0;
+    PORTDbits.RD6 = 0;
+    PORTDbits.RD7 = 0;
 }
 /*-----------------------------------------------------------------------------
  --------------------------------- FUNCIONES ----------------------------------
