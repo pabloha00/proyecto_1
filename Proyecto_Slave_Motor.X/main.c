@@ -38,7 +38,6 @@ Descripcion:
 #include <xc.h>
 #include <proc/pic16f887.h>
 #include "Osc_config.h"
-#include "UART_CONFIG.h"
 #include "ADC_CONFIG.h"
 #include "I2C.h"
 /*-----------------------------------------------------------------------------
