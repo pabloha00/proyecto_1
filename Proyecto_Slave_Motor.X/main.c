@@ -174,12 +174,11 @@ void setup(void)
 void servo(void)
 {
     //-------ANTIRREBOTE DE BOTON PARA MOVER MOTOR
-    if (antirrebote==1 && PORTBbits.RB1==0  )
+    if (antirrebote==1 && PORTBbits.RB1==0 && motor_recibido==0)
     {
         botonazo++;
         antirrebote=0;
-    }
-    //-------FUNCIONAMIENTO DE SERVO DE TALANQUERA
+        //-------FUNCIONAMIENTO DE SERVO DE TALANQUERA
     switch(botonazo)
     {
         case(0):                //servo en posicion de 0°
@@ -195,6 +194,12 @@ void servo(void)
         case(2):
             botonazo=0;         //regresa a posicion 0°
             break;
+    }
+    }
+    else if(motor_recibido==1){
+        PORTEbits.RE0=1;
+        __delay_ms(1);
+        PORTEbits.RE0=0;
     }
 }
 //-------FUNCION PARA RECEPCION DEL ADC

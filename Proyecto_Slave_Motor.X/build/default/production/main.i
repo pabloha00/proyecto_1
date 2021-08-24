@@ -2653,16 +2653,16 @@ extern __bank0 __bit __timeout;
 void osc_config(uint8_t freq);
 # 40 "main.c" 2
 
-# 1 "./UART_CONFIG.h" 1
-# 13 "./UART_CONFIG.h"
+# 1 "./ADC_CONFIG.h" 1
+# 13 "./ADC_CONFIG.h"
 void ADC_config(void);
 # 41 "main.c" 2
 
-# 1 "./ADC_CONFIG.h" 1
-# 20 "./ADC_CONFIG.h"
+# 1 "./I2C.h" 1
+# 20 "./I2C.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
-# 20 "./ADC_CONFIG.h" 2
-# 29 "./ADC_CONFIG.h"
+# 20 "./I2C.h" 2
+# 29 "./I2C.h"
 void I2C_Master_Init(const unsigned long c);
 
 
@@ -2700,9 +2700,6 @@ unsigned short I2C_Master_Read(unsigned short a);
 
 void I2C_Slave_Init(uint8_t address);
 # 42 "main.c" 2
-
-# 1 "./I2C.h" 1
-# 43 "main.c" 2
 
 
 
@@ -2838,11 +2835,10 @@ void setup(void)
 void servo(void)
 {
 
-    if (antirrebote==1 && PORTBbits.RB1==0 )
+    if (antirrebote==1 && PORTBbits.RB1==0 && motor_recibido==0)
     {
         botonazo++;
         antirrebote=0;
-    }
 
     switch(botonazo)
     {
@@ -2859,6 +2855,12 @@ void servo(void)
         case(2):
             botonazo=0;
             break;
+    }
+    }
+    else if(motor_recibido==1){
+        PORTEbits.RE0=1;
+        _delay((unsigned long)((1)*(8000000/4000.0)));
+        PORTEbits.RE0=0;
     }
 }
 

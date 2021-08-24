@@ -25,17 +25,17 @@
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
 "93
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
-"64 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+"63 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
-"113
+"112
 [v _main main `(v  1 e 1 0 ]
-"130
+"129
 [v _setup setup `(v  1 e 1 0 ]
-"175
+"174
 [v _servo servo `(v  1 e 1 0 ]
-"202
+"206
 [v _toggle_adc toggle_adc `(v  1 e 1 0 ]
-"213
+"217
 [v _temp temp `(v  1 e 1 0 ]
 "17 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
 [v _osc_config osc_config `(v  1 e 1 0 ]
@@ -297,28 +297,6 @@
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S870 . 1 `uc 1 RX9D 1 0 :1:0 
-`uc 1 OERR 1 0 :1:1 
-`uc 1 FERR 1 0 :1:2 
-`uc 1 ADDEN 1 0 :1:3 
-`uc 1 CREN 1 0 :1:4 
-`uc 1 SREN 1 0 :1:5 
-`uc 1 RX9 1 0 :1:6 
-`uc 1 SPEN 1 0 :1:7 
-]
-"1068
-[s S879 . 1 `uc 1 RCD8 1 0 :1:0 
-`uc 1 . 1 0 :5:1 
-`uc 1 RC9 1 0 :1:6 
-]
-[s S883 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 nRC8 1 0 :1:6 
-]
-[s S886 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 RC8_9 1 0 :1:6 
-]
-[u S889 . 1 `S870 1 . 1 0 `S879 1 . 1 0 `S883 1 . 1 0 `S886 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES889  1 e 1 @24 ]
 [s S26 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
@@ -363,29 +341,6 @@
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-[s S810 . 1 `uc 1 TX9D 1 0 :1:0 
-`uc 1 TRMT 1 0 :1:1 
-`uc 1 BRGH 1 0 :1:2 
-`uc 1 SENDB 1 0 :1:3 
-`uc 1 SYNC 1 0 :1:4 
-`uc 1 TXEN 1 0 :1:5 
-`uc 1 TX9 1 0 :1:6 
-`uc 1 CSRC 1 0 :1:7 
-]
-"2582
-[s S819 . 1 `uc 1 TXD8 1 0 :1:0 
-`uc 1 . 1 0 :5:1 
-`uc 1 nTX8 1 0 :1:6 
-]
-[s S823 . 1 `uc 1 . 1 0 :6:0 
-`uc 1 TX8_9 1 0 :1:6 
-]
-[u S826 . 1 `S810 1 . 1 0 `S819 1 . 1 0 `S823 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES826  1 e 1 @152 ]
-"2642
-[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
-"2704
-[v _SPBRGH SPBRGH `VEuc  1 e 1 @154 ]
 [s S757 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 VCFG0 1 0 :1:4 
 `uc 1 VCFG1 1 0 :1:5 
@@ -395,18 +350,6 @@
 "2991
 [u S763 . 1 `S757 1 . 1 0 ]
 [v _ADCON1bits ADCON1bits `VES763  1 e 1 @159 ]
-[s S847 . 1 `uc 1 ABDEN 1 0 :1:0 
-`uc 1 WUE 1 0 :1:1 
-`uc 1 . 1 0 :1:2 
-`uc 1 BRG16 1 0 :1:3 
-`uc 1 SCKP 1 0 :1:4 
-`uc 1 . 1 0 :1:5 
-`uc 1 RCIDL 1 0 :1:6 
-`uc 1 ABDOVF 1 0 :1:7 
-]
-"3352
-[u S856 . 1 `S847 1 . 1 0 ]
-[v _BAUDCTLbits BAUDCTLbits `VES856  1 e 1 @391 ]
 "3896
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "4040
@@ -419,30 +362,30 @@
 [v _TRISC3 TRISC3 `VEb  1 e 0 @1083 ]
 "4460
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
-"51 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+"50 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
 [v _antirrebote antirrebote `uc  1 e 1 0 ]
 [v _botonazo botonazo `uc  1 e 1 0 ]
-"52
+"51
 [v _conversion1 conversion1 `uc  1 e 1 0 ]
 [v _conversion_total conversion_total `uc  1 e 1 0 ]
 [v _temperatura_aprox temperatura_aprox `uc  1 e 1 0 ]
-"53
+"52
 [v _z z `uc  1 e 1 0 ]
 [v _motor_recibido motor_recibido `uc  1 e 1 0 ]
-"113
+"112
 [v _main main `(v  1 e 1 0 ]
 {
-"126
+"125
 } 0
-"202
+"206
 [v _toggle_adc toggle_adc `(v  1 e 1 0 ]
 {
-"211
+"215
 } 0
-"213
+"217
 [v _temp temp `(v  1 e 1 0 ]
 {
-"221
+"225
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -489,10 +432,10 @@
 [v ___fldiv@b b `d  1 p 4 14 ]
 "185
 } 0
-"130 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+"129 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"170
+"169
 } 0
 "17 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
 [v _osc_config osc_config `(v  1 e 1 0 ]
@@ -516,13 +459,13 @@
 {
 "33
 } 0
-"175 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+"174 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
 [v _servo servo `(v  1 e 1 0 ]
 {
-"200
+"204
 } 0
-"64
+"63
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"109
+"108
 } 0
