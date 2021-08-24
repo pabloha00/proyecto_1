@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=I2C.c main.c Osc_config.c LCD.c ASCII.c UART_CONFIG.c
+SOURCEFILES_QUOTED_IF_SPACED=I2C.c main.c Osc_config.c LCD.c ASCII.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/I2C.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/Osc_config.p1 ${OBJECTDIR}/LCD.p1 ${OBJECTDIR}/ASCII.p1 ${OBJECTDIR}/UART_CONFIG.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/I2C.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/Osc_config.p1.d ${OBJECTDIR}/LCD.p1.d ${OBJECTDIR}/ASCII.p1.d ${OBJECTDIR}/UART_CONFIG.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/I2C.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/Osc_config.p1 ${OBJECTDIR}/LCD.p1 ${OBJECTDIR}/ASCII.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/I2C.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/Osc_config.p1.d ${OBJECTDIR}/LCD.p1.d ${OBJECTDIR}/ASCII.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/I2C.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/Osc_config.p1 ${OBJECTDIR}/LCD.p1 ${OBJECTDIR}/ASCII.p1 ${OBJECTDIR}/UART_CONFIG.p1
+OBJECTFILES=${OBJECTDIR}/I2C.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/Osc_config.p1 ${OBJECTDIR}/LCD.p1 ${OBJECTDIR}/ASCII.p1
 
 # Source Files
-SOURCEFILES=I2C.c main.c Osc_config.c LCD.c ASCII.c UART_CONFIG.c
+SOURCEFILES=I2C.c main.c Osc_config.c LCD.c ASCII.c
 
 
 
@@ -134,14 +134,6 @@ ${OBJECTDIR}/ASCII.p1: ASCII.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/ASCII.d ${OBJECTDIR}/ASCII.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/ASCII.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/UART_CONFIG.p1: UART_CONFIG.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/UART_CONFIG.p1.d 
-	@${RM} ${OBJECTDIR}/UART_CONFIG.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/UART_CONFIG.p1 UART_CONFIG.c 
-	@-${MV} ${OBJECTDIR}/UART_CONFIG.d ${OBJECTDIR}/UART_CONFIG.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/UART_CONFIG.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
 else
 ${OBJECTDIR}/I2C.p1: I2C.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -182,14 +174,6 @@ ${OBJECTDIR}/ASCII.p1: ASCII.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/ASCII.p1 ASCII.c 
 	@-${MV} ${OBJECTDIR}/ASCII.d ${OBJECTDIR}/ASCII.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/ASCII.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/UART_CONFIG.p1: UART_CONFIG.c  nbproject/Makefile-${CND_CONF}.mk 
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/UART_CONFIG.p1.d 
-	@${RM} ${OBJECTDIR}/UART_CONFIG.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/UART_CONFIG.p1 UART_CONFIG.c 
-	@-${MV} ${OBJECTDIR}/UART_CONFIG.d ${OBJECTDIR}/UART_CONFIG.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/UART_CONFIG.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

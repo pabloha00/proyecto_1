@@ -35,7 +35,6 @@
 #include "Osc_config.h"
 #include "ASCII.h"
 #include "LCD.h"
-#include "UART_CONFIG.h"
 #include <xc.h>
 //*****************************************************************************
 // Definici n de variables
@@ -57,7 +56,6 @@ uint8_t UM;
 uint8_t DM;
 uint8_t CERRADO;
 uint8_t con;
-uint8_t toggleTX;
 uint8_t temperatura;
 //*****************************************************************************
 // Definici n de funciones para que se puedan colocar despu s del main de lo 
@@ -67,17 +65,6 @@ void setup(void);
 void LECT1(void);
 const char* conver(void); //Datos que recibirá la LCD
 const char* conver1(void);
-void envio(void);
-
-/*****************************************************************************
- Interruciones
- ******************************************************************************/
-void __interrupt() ISR(void){
-    if (PIR1bits.TXIF == 1){    //El transmit buffer del EUSART está vacío
-        envio();    //Se mandará caracter por caracter con esta función
-        PIR1bits.TXIF = 0;
-    }
-}
 //*****************************************************************************
 // Main
 //*****************************************************************************
@@ -163,17 +150,12 @@ void setup(void){
     ANSELH = 0;
     TRISA = 0;
     TRISB = 0;
-    TRISCbits.TRISC6 = 0;
-    TRISCbits.TRISC7 = 1;
     TRISD = 0;
     TRISE = 0;
     PORTA = 0;
     PORTB = 0;
     PORTD = 0;
     osc_config(8);
-    PIE1bits.RCIE = 0;  //Habilita EUSART Recieve Interrupt
-    PIE1bits.TXIE = 1;  //Habilita EUSART Transmit Interrupt
-    uart_config();
     I2C_Master_Init(100000);        // Inicializar Comuncaci n I2C
     
     I2C_Master_Start();     //Escritura de datos iniciales
@@ -402,25 +384,5 @@ void LECT1(void){
         DM = 0x35;
         con = MIN-64-16;
         UM = num_ascii(con);
-    }
-}
-
-void envio(void){   //Lectura de la terminal virtual
-    toggleTX++;     //Siempre se irá aumentando este contador para que mande datos uno por uno
-    if (toggleTX == 1){ //P
-        TXREG = 0x31;
-    }
-    if (toggleTX == 2){ //O
-        TXREG = 0x30;
-    }
-    if (toggleTX == 3){ //T
-        TXREG = 0x2C;
-    }
-    if (toggleTX == 4){ //1
-        TXREG = NUM;
-    }
-    if (toggleTX == 5){ //brk
-        TXREG = 13;
-        toggleTX = 0;
     }
 }

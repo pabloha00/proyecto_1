@@ -3,5 +3,4 @@ main.c  \
 I2C.h  \
 Osc_config.h  \
 ASCII.h  \
-LCD.h  \
-UART_CONFIG.h 
+LCD.h 

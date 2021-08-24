@@ -5,8 +5,10 @@
  * Created on 30 de julio de 2021, 10:00 PM
  */
 
-#ifndef ADC_CONFIG_H
-#define	ADC_CONFIG_H
+#ifndef UART_CONFIG_H
+#define	UART_CONFIG_H
+#include <stdint.h>
+#include <xc.h> 
 /*-----------------------------------------------------------------------------
  ------------- prototipo de funcion de configuracion de ADC -------------------
 -----------------------------------------------------------------------------*/

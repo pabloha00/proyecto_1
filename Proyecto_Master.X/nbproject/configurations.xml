@@ -8,7 +8,6 @@
       <itemPath>Osc_config.h</itemPath>
       <itemPath>ASCII.h</itemPath>
       <itemPath>LCD.h</itemPath>
-      <itemPath>UART_CONFIG.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -22,7 +21,6 @@
       <itemPath>Osc_config.c</itemPath>
       <itemPath>LCD.c</itemPath>
       <itemPath>ASCII.c</itemPath>
-      <itemPath>UART_CONFIG.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
