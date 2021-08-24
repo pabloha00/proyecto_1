@@ -32,7 +32,7 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="0" flags="00008023" y="0" h="250" pid="0" iid="19">
+   <POPUP w="450" x="0" flags="00000023" y="0" h="250" pid="0" iid="19">
     <PROPERTIES>
      <ITEM name="ComboBox1000">S</ITEM>
      <ITEM name="ComboBox1001">Sr</ITEM>
@@ -94,7 +94,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="156" x="174" flags="00000001" y="295" h="72" pid="1" iid="14">
+   <POPUP w="156" x="130" flags="00008001" y="266" h="72" pid="1" iid="14">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="238" flags="00000008" y="329" h="32" pid="2" iid="14">
@@ -189,7 +189,7 @@
    <POPUP w="114" x="118" flags="00000008" y="209" h="127" pid="7" iid="21">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="8" x="138" flags="80000002" y="229" h="8" pid="8" iid="21">
+   <POPUP w="8" x="138" flags="00000000" y="229" h="8" pid="8" iid="21">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>
@@ -245,7 +245,7 @@
    <POPUP w="114" x="258" flags="00000008" y="349" h="127" pid="7" iid="23">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="8" x="278" flags="80000002" y="369" h="8" pid="8" iid="23">
+   <POPUP w="8" x="278" flags="00000002" y="369" h="8" pid="8" iid="23">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>

@@ -11,20 +11,29 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\user\AppData\Local\Temp\xcAsfp4.o
+$C:\Users\user\AppData\Local\Temp\xcAseto.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Proyecto_Slave_Motor.X.production.o
-cinit CODE 0 F F 7 2
-text1 CODE 0 B0 B0 27 2
-text2 CODE 0 79 79 37 2
-text3 CODE 0 D7 D7 1A 2
-text4 CODE 0 16 16 63 2
-maintext CODE 0 F1 F1 10 2
-cstackCOMMON COMMON 1 70 70 6 1
+cinit CODE 0 F F E 2
+text1 CODE 0 4B7 4B7 1C 2
+text2 CODE 0 3A6 3A6 55 2
+text3 CODE 0 1FA 1FA BC 2
+text4 CODE 0 2B6 2B6 7C 2
+text5 CODE 0 1D 1D 1DD 2
+text6 CODE 0 442 442 3E 2
+text7 CODE 0 480 480 37 2
+text8 CODE 0 4D3 4D3 1A 2
+text9 CODE 0 505 505 14 2
+text10 CODE 0 3FB 3FB 47 2
+text11 CODE 0 332 332 74 2
+maintext CODE 0 4ED 4ED 18 2
+cstackCOMMON COMMON 1 70 70 7 1
+cstackBANK0 BANK0 1 20 20 34 1
 intentry CODE 0 4 4 8 2
-bssCOMMON COMMON 1 76 76 3 1
+bssBANK0 BANK0 1 54 54 5 1
+bssCOMMON COMMON 1 77 77 3 1
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -32,32 +41,32 @@ config CONFIG 4 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 20-6F 1
+RAM 59-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 20-6F 1
+BANK0 59-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 101-1FFF 2
+CONST 519-1FFF 2
 ENTRY 3-3 2
-ENTRY 101-1FFF 2
+ENTRY 519-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 101-1FFF 2
+CODE 519-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 79-7D 1
+COMMON 7A-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 101-1FFF 2
+STRCODE 519-1FFF 2
 STRING 3-3 2
-STRING 101-1FFF 2
+STRING 519-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -72,99 +81,355 @@ STRING 101-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Proyecto_Slave_Motor.X.production.o
-F cinit CODE >811:C:\Users\user\AppData\Local\Temp\xcAsfp4.s
-F cinit CODE >814:C:\Users\user\AppData\Local\Temp\xcAsfp4.s
-F cinit CODE >831:C:\Users\user\AppData\Local\Temp\xcAsfp4.s
-10 cinit CODE >832:C:\Users\user\AppData\Local\Temp\xcAsfp4.s
-11 cinit CODE >833:C:\Users\user\AppData\Local\Temp\xcAsfp4.s
-12 cinit CODE >839:C:\Users\user\AppData\Local\Temp\xcAsfp4.s
-12 cinit CODE >841:C:\Users\user\AppData\Local\Temp\xcAsfp4.s
-13 cinit CODE >842:C:\Users\user\AppData\Local\Temp\xcAsfp4.s
-4 intentry CODE >62:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-16 text4 CODE >62:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-16 text4 CODE >64:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-1C text4 CODE >66:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-1D text4 CODE >68:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-25 text4 CODE >69:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-29 text4 CODE >70:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-2A text4 CODE >71:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-2B text4 CODE >72:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-2C text4 CODE >75:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-36 text4 CODE >76:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-3C text4 CODE >77:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-3D text4 CODE >78:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-3E text4 CODE >79:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-44 text4 CODE >80:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-4A text4 CODE >81:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-4E text4 CODE >83:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-57 text4 CODE >84:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-5D text4 CODE >85:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-60 text4 CODE >86:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-64 text4 CODE >87:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-65 text4 CODE >88:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-69 text4 CODE >89:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-6F text4 CODE >90:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-6F text4 CODE >92:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-72 text4 CODE >96:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-D7 text3 CODE >93:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-D8 text3 CODE >95:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-DC text3 CODE >96:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-E0 text3 CODE >97:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-E4 text3 CODE >98:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-E6 text3 CODE >99:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-E7 text3 CODE >100:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-E8 text3 CODE >101:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-E9 text3 CODE >102:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-EA text3 CODE >103:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-ED text3 CODE >104:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-F0 text3 CODE >105:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\I2C.c
-79 text2 CODE >17:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-7A text2 CODE >19:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-7B text2 CODE >22:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-81 text2 CODE >23:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-82 text2 CODE >24:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-83 text2 CODE >27:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-89 text2 CODE >28:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-8A text2 CODE >29:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-8B text2 CODE >32:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-91 text2 CODE >33:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-92 text2 CODE >34:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-93 text2 CODE >37:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-97 text2 CODE >38:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-98 text2 CODE >39:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-99 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-9E text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-A3 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-A6 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-A9 text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-AC text2 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-AF text2 CODE >43:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\Osc_config.c
-B0 text1 CODE >114:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-B0 text1 CODE >117:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-B3 text1 CODE >118:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-B4 text1 CODE >120:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-B7 text1 CODE >121:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-B8 text1 CODE >122:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-B9 text1 CODE >123:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-BA text1 CODE >124:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-BB text1 CODE >127:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-BE text1 CODE >128:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-BF text1 CODE >129:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-C0 text1 CODE >130:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-C1 text1 CODE >131:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-C2 text1 CODE >133:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-C8 text1 CODE >134:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-CC text1 CODE >137:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-CD text1 CODE >138:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-CE text1 CODE >139:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-CF text1 CODE >140:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-D0 text1 CODE >141:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-D6 text1 CODE >142:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-F1 maintext CODE >100:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-F1 maintext CODE >103:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-F6 maintext CODE >107:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-F9 maintext CODE >107:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
-FB maintext CODE >107:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyecto_Slave_Motor.X\main.c
+F cinit CODE >1158:C:\Users\user\AppData\Local\Temp\xcAseto.s
+F cinit CODE >1161:C:\Users\user\AppData\Local\Temp\xcAseto.s
+F cinit CODE >1196:C:\Users\user\AppData\Local\Temp\xcAseto.s
+10 cinit CODE >1197:C:\Users\user\AppData\Local\Temp\xcAseto.s
+11 cinit CODE >1198:C:\Users\user\AppData\Local\Temp\xcAseto.s
+12 cinit CODE >1201:C:\Users\user\AppData\Local\Temp\xcAseto.s
+13 cinit CODE >1202:C:\Users\user\AppData\Local\Temp\xcAseto.s
+14 cinit CODE >1203:C:\Users\user\AppData\Local\Temp\xcAseto.s
+15 cinit CODE >1204:C:\Users\user\AppData\Local\Temp\xcAseto.s
+16 cinit CODE >1205:C:\Users\user\AppData\Local\Temp\xcAseto.s
+17 cinit CODE >1206:C:\Users\user\AppData\Local\Temp\xcAseto.s
+18 cinit CODE >1207:C:\Users\user\AppData\Local\Temp\xcAseto.s
+19 cinit CODE >1213:C:\Users\user\AppData\Local\Temp\xcAseto.s
+19 cinit CODE >1215:C:\Users\user\AppData\Local\Temp\xcAseto.s
+1A cinit CODE >1216:C:\Users\user\AppData\Local\Temp\xcAseto.s
+4 intentry CODE >64:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+332 text11 CODE >64:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+332 text11 CODE >67:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+336 text11 CODE >69:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+33E text11 CODE >70:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+341 text11 CODE >72:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+342 text11 CODE >73:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+343 text11 CODE >76:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+349 text11 CODE >78:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+34A text11 CODE >80:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+352 text11 CODE >81:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+356 text11 CODE >82:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+357 text11 CODE >83:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+358 text11 CODE >84:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+359 text11 CODE >87:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+363 text11 CODE >89:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+369 text11 CODE >90:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+36A text11 CODE >91:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+36B text11 CODE >92:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+371 text11 CODE >93:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+377 text11 CODE >94:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+37B text11 CODE >96:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+37C text11 CODE >97:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+384 text11 CODE >98:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+38A text11 CODE >99:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+38D text11 CODE >100:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+391 text11 CODE >101:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+392 text11 CODE >102:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+396 text11 CODE >103:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+39C text11 CODE >104:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+39C text11 CODE >106:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+39F text11 CODE >109:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+3FB text10 CODE >175:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+3FB text10 CODE >178:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+406 text10 CODE >180:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+40A text10 CODE >181:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+40C text10 CODE >186:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+40C text10 CODE >187:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+40F text10 CODE >188:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+418 text10 CODE >189:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+41B text10 CODE >190:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+41C text10 CODE >191:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+41C text10 CODE >192:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+41F text10 CODE >193:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+428 text10 CODE >194:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+42B text10 CODE >195:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+42C text10 CODE >197:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+42D text10 CODE >198:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+42E text10 CODE >199:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+433 text10 CODE >199:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+438 text10 CODE >199:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+43B text10 CODE >199:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+43E text10 CODE >199:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+441 text10 CODE >200:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+505 text9 CODE >22:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\ADC_CONFIG.c
+505 text9 CODE >25:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\ADC_CONFIG.c
+508 text9 CODE >26:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\ADC_CONFIG.c
+509 text9 CODE >27:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\ADC_CONFIG.c
+50A text9 CODE >29:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\ADC_CONFIG.c
+50E text9 CODE >30:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\ADC_CONFIG.c
+510 text9 CODE >31:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\ADC_CONFIG.c
+515 text9 CODE >32:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\ADC_CONFIG.c
+518 text9 CODE >33:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\ADC_CONFIG.c
+4D3 text8 CODE >93:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+4D4 text8 CODE >95:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+4D8 text8 CODE >96:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+4DC text8 CODE >97:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+4E0 text8 CODE >98:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+4E2 text8 CODE >99:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+4E3 text8 CODE >100:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+4E4 text8 CODE >101:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+4E5 text8 CODE >102:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+4E6 text8 CODE >103:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+4E9 text8 CODE >104:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+4EC text8 CODE >105:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\I2C.c
+480 text7 CODE >17:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+481 text7 CODE >19:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+482 text7 CODE >22:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+488 text7 CODE >23:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+489 text7 CODE >24:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+48A text7 CODE >27:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+490 text7 CODE >28:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+491 text7 CODE >29:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+492 text7 CODE >32:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+498 text7 CODE >33:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+499 text7 CODE >34:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+49A text7 CODE >37:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+49E text7 CODE >38:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+49F text7 CODE >39:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+4A0 text7 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+4A5 text7 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+4AA text7 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+4AD text7 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+4B0 text7 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+4B3 text7 CODE >41:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+4B6 text7 CODE >43:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
+442 text6 CODE >130:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+442 text6 CODE >133:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+445 text6 CODE >134:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+446 text6 CODE >135:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+447 text6 CODE >137:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+44A text6 CODE >138:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+44B text6 CODE >139:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+44C text6 CODE >140:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+44D text6 CODE >141:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+44E text6 CODE >144:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+451 text6 CODE >145:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+452 text6 CODE >146:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+453 text6 CODE >147:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+454 text6 CODE >149:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+45A text6 CODE >151:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+45F text6 CODE >153:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+462 text6 CODE >154:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+466 text6 CODE >155:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+46A text6 CODE >156:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+46C text6 CODE >157:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+46E text6 CODE >160:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+471 text6 CODE >161:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+472 text6 CODE >163:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+478 text6 CODE >165:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+479 text6 CODE >166:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+47A text6 CODE >167:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+47B text6 CODE >168:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+47C text6 CODE >169:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+47F text6 CODE >170:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+1D text5 CODE >8:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1D text5 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+24 text5 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+2A text5 CODE >28:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+2E text5 CODE >29:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+2F text5 CODE >33:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+34 text5 CODE >35:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+39 text5 CODE >37:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+41 text5 CODE >40:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+42 text5 CODE >42:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+43 text5 CODE >43:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+44 text5 CODE >46:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+4C text5 CODE >49:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+51 text5 CODE >50:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+57 text5 CODE >51:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+5B text5 CODE >52:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+5C text5 CODE >56:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+61 text5 CODE >58:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+66 text5 CODE >60:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+6E text5 CODE >63:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+6F text5 CODE >65:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+70 text5 CODE >66:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+71 text5 CODE >69:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+79 text5 CODE >70:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+79 text5 CODE >75:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+7D text5 CODE >75:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+81 text5 CODE >76:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+89 text5 CODE >77:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+8D text5 CODE >78:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+91 text5 CODE >79:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+9A text5 CODE >83:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+9F text5 CODE >84:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+9F text5 CODE >85:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+A8 text5 CODE >89:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+B0 text5 CODE >89:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+B6 text5 CODE >89:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+BA text5 CODE >92:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+C2 text5 CODE >93:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+CA text5 CODE >94:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+D2 text5 CODE >96:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+D3 text5 CODE >97:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+D4 text5 CODE >100:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+D9 text5 CODE >101:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+DB text5 CODE >101:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+E2 text5 CODE >102:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+E4 text5 CODE >102:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+EB text5 CODE >103:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+EF text5 CODE >104:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+F0 text5 CODE >106:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+F2 text5 CODE >106:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+F9 text5 CODE >112:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+FB text5 CODE >112:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+FF text5 CODE >112:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+103 text5 CODE >112:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+107 text5 CODE >112:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+10B text5 CODE >115:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+10C text5 CODE >116:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+10F text5 CODE >116:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+113 text5 CODE >116:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+117 text5 CODE >116:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+11A text5 CODE >118:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+11E text5 CODE >97:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+120 text5 CODE >97:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+124 text5 CODE >122:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+128 text5 CODE >122:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+12C text5 CODE >123:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+12E text5 CODE >128:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+130 text5 CODE >128:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+137 text5 CODE >129:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+13B text5 CODE >130:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+13C text5 CODE >132:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+13E text5 CODE >132:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+145 text5 CODE >133:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+147 text5 CODE >133:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+14B text5 CODE >127:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+14F text5 CODE >139:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+150 text5 CODE >140:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+154 text5 CODE >141:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+164 text5 CODE >141:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+168 text5 CODE >142:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+16A text5 CODE >143:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+16B text5 CODE >144:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+16B text5 CODE >145:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+170 text5 CODE >150:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+175 text5 CODE >151:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+178 text5 CODE >151:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+17C text5 CODE >151:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+180 text5 CODE >151:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+183 text5 CODE >152:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+187 text5 CODE >153:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1A0 text5 CODE >154:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1A2 text5 CODE >154:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1A6 text5 CODE >159:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1AB text5 CODE >159:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1AF text5 CODE >159:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1B3 text5 CODE >160:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1B9 text5 CODE >161:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1C1 text5 CODE >165:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1C8 text5 CODE >165:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1CC text5 CODE >165:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1D0 text5 CODE >166:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1D4 text5 CODE >167:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1DC text5 CODE >169:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1DD text5 CODE >170:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1DD text5 CODE >173:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1E3 text5 CODE >175:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1E7 text5 CODE >176:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1E8 text5 CODE >177:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1E9 text5 CODE >180:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1ED text5 CODE >181:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1ED text5 CODE >182:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1EF text5 CODE >182:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1F4 text5 CODE >183:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+1F9 text5 CODE >185:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcdiv.c
+2B6 text4 CODE >43:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2B6 text4 CODE >47:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2C3 text4 CODE >48:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2CC text4 CODE >49:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2D5 text4 CODE >49:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2DB text4 CODE >49:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2E1 text4 CODE >50:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2E2 text4 CODE >51:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2EA text4 CODE >52:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2EC text4 CODE >53:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2F0 text4 CODE >54:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2F3 text4 CODE >54:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2F8 text4 CODE >57:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2F9 text4 CODE >57:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+2FF text4 CODE >57:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+301 text4 CODE >58:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+30A text4 CODE >60:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+30C text4 CODE >60:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+311 text4 CODE >63:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+313 text4 CODE >63:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+31A text4 CODE >64:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+31C text4 CODE >62:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+31C text4 CODE >65:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+321 text4 CODE >67:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+326 text4 CODE >68:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+32B text4 CODE >68:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+32D text4 CODE >68:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+32F text4 CODE >68:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+331 text4 CODE >70:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\fltol.c
+1FA text3 CODE >10:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+1FD text3 CODE >15:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+206 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+20F text3 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+211 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+213 text3 CODE >16:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+215 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+216 text3 CODE >19:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+21E text3 CODE >20:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+21E text3 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+222 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+226 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+22F text3 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+233 text3 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+234 text3 CODE >25:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+238 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+239 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+23F text3 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+241 text3 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+248 text3 CODE >29:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+24C text3 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+24F text3 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+253 text3 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+257 text3 CODE >30:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+25A text3 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+25B text3 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+261 text3 CODE >31:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+263 text3 CODE >28:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+263 text3 CODE >32:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+26A text3 CODE >34:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+26C text3 CODE >35:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+26E text3 CODE >35:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+275 text3 CODE >33:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+27B text3 CODE >33:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+27F text3 CODE >37:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+283 text3 CODE >38:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+28B text3 CODE >39:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+28D text3 CODE >40:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+293 text3 CODE >40:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+299 text3 CODE >40:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+2A3 text3 CODE >41:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+2AC text3 CODE >42:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+2AD text3 CODE >43:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+2B5 text3 CODE >44:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+3A6 text2 CODE >213:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+3A6 text2 CODE >215:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+3E7 text2 CODE >217:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+3E9 text2 CODE >217:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+3EF text2 CODE >217:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+3F3 text2 CODE >218:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+3F7 text2 CODE >219:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+3F7 text2 CODE >220:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+3FA text2 CODE >221:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4B7 text1 CODE >202:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4B7 text1 CODE >204:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4BD text1 CODE >206:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4BE text1 CODE >207:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4C6 text1 CODE >208:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4CF text1 CODE >209:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4D2 text1 CODE >211:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4ED maintext CODE >113:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4ED maintext CODE >115:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4F2 maintext CODE >117:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4F2 maintext CODE >120:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4F7 maintext CODE >122:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+4FC maintext CODE >124:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -177,10 +442,10 @@ FB maintext CODE >107:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\Proyect
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-_z 76 0 COMMON 1 bssCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
+_z 56 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
 ___latbits 2 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-__Hspace_0 101 0 ABS 0 - -
-__Hspace_1 79 0 ABS 0 - -
+__Hspace_0 519 0 ABS 0 - -
+__Hspace_1 7A 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
@@ -188,51 +453,80 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _BF 4A0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAsfp4.o
-_main 1E2 0 CODE 0 maintext dist/default/production\Proyecto_Slave_Motor.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAseto.o
+_main 9DA 0 CODE 0 maintext dist/default/production\Proyecto_Slave_Motor.X.production.o
+_temp 74C 0 CODE 0 text2 dist/default/production\Proyecto_Slave_Motor.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-start 18 0 CODE 0 init C:\Users\user\AppData\Local\Temp\xcAsfp4.o
+start 18 0 CODE 0 init C:\Users\user\AppData\Local\Temp\xcAseto.o
+__size_of___fldiv 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+__size_of___fltol 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+__size_of_temp 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
+_botonazo 78 0 COMMON 1 bssCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
+_OPTION_REGbits 81 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfp4.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfp4.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfp4.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfp4.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfp4.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsfp4.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAseto.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAseto.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAseto.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAseto.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAseto.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAseto.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
+__size_of_ADC_config 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
+_ADRESL 9E 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-_BASURA 78 0 COMMON 1 bssCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
 _SSPCONbits 14 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+_CCPR1L 15 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+_conversion1 58 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+_conversion_total 57 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__size_of_toggle_adc 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-_OPTION_REG 81 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAsfp4.o
-___stacklo 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAsfp4.o
-_I2C_Slave_Init 1AE 0 CODE 0 text3 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fldiv@aexp 43 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fldiv@bexp 42 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fldiv@sign 3B 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__end_of___fldiv 3F4 0 CODE 0 text5 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__end_of___fltol 664 0 CODE 0 text4 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAseto.o
+___stacklo 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAseto.o
+_BAUDCTLbits 187 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+_I2C_Slave_Init 9A6 0 CODE 0 text8 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fldiv@a 2A 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fldiv@b 2E 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__size_of_servo 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+_WPUBbits 95 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\Proyecto_Slave_Motor.X.production.o
+_TRISBbits 86 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+_TRISDbits 88 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _TRISEbits 89 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-_osc_config F2 0 CODE 0 text2 dist/default/production\Proyecto_Slave_Motor.X.production.o
+_osc_config 900 0 CODE 0 text7 dist/default/production\Proyecto_Slave_Motor.X.production.o
+_SPBRGH 9A 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
 _SSPADD 93 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAsfp4.o
+_motor_recibido 55 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAseto.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
-__Hcinit 2C 0 CODE 0 cinit -
-__end_of_I2C_Slave_Init 1E2 0 CODE 0 text3 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__Hcinit 3A 0 CODE 0 cinit -
+__end_of_I2C_Slave_Init 9DA 0 CODE 0 text8 dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Hstack 0 0 STACK 2 stack -
+__size_of___xxtofl 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
+___xxtofl@arg 26 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___xxtofl@exp 25 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___xxtofl@val 73 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
 __Lbank0 0 0 ABS 0 bank0 -
@@ -241,7 +535,8 @@ __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
 __Lcinit 1E 0 CODE 0 cinit -
 __Lstack 0 0 STACK 2 stack -
-_PORTAbits 5 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+_PORTBbits 6 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+_PORTEbits 9 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
@@ -259,76 +554,114 @@ __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-__S0 101 0 ABS 0 - -
-__S1 79 0 ABS 0 - -
+__S0 519 0 ABS 0 - -
+__S1 7A 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 2C 0 CODE 0 text4 dist/default/production\Proyecto_Slave_Motor.X.production.o
-__end_of_osc_config 160 0 CODE 0 text2 dist/default/production\Proyecto_Slave_Motor.X.production.o
+_isr 664 0 CODE 0 text11 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__end_of_osc_config 96E 0 CODE 0 text7 dist/default/production\Proyecto_Slave_Motor.X.production.o
+_temperatura_aprox 77 0 COMMON 1 bssCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-__end_of_isr F2 0 CODE 0 text4 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___xxtofl 3F4 0 CODE 0 text3 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__end_of_isr 74C 0 CODE 0 text11 dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\user\AppData\Local\Temp\xcAsfp4.o
-__pmaintext 1E2 0 CODE 0 maintext dist/default/production\Proyecto_Slave_Motor.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\user\AppData\Local\Temp\xcAseto.o
+__end_of___xxtofl 56C 0 CODE 0 text3 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+_RCSTAbits 18 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+__ptext10 7F6 0 CODE 0 text10 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__ptext11 664 0 CODE 0 text11 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fldiv 3A 0 CODE 0 text5 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fltol 56C 0 CODE 0 text4 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__pmaintext 9DA 0 CODE 0 maintext dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 I2C_Slave_Init@address 73 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fldiv@grs 3E 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fldiv@rem 37 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fldiv@new_exp 3C 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+_ADCON0bits 1F 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+_ADCON1bits 9F 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 76 0 COMMON 1 bssCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
+__pbssCOMMON 77 0 COMMON 1 bssCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
+_ADC_config A0A 0 CODE 0 text9 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Lend_init 18 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 24 0 CODE 0 cinit dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fltol@exp1 4E 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+end_of_initialization 32 0 CODE 0 cinit dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Hintentry 18 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
+?___fldiv 2A 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+?___fltol 44 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Hreset_vec 6 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-__ptext1 160 0 CODE 0 text1 dist/default/production\Proyecto_Slave_Motor.X.production.o
-__ptext2 F2 0 CODE 0 text2 dist/default/production\Proyecto_Slave_Motor.X.production.o
-__ptext3 1AE 0 CODE 0 text3 dist/default/production\Proyecto_Slave_Motor.X.production.o
-__ptext4 2C 0 CODE 0 text4 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__ptext1 96E 0 CODE 0 text1 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__ptext2 74C 0 CODE 0 text2 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__ptext3 3F4 0 CODE 0 text3 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__ptext4 56C 0 CODE 0 text4 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__ptext5 3A 0 CODE 0 text5 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__ptext6 884 0 CODE 0 text6 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__ptext7 900 0 CODE 0 text7 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__ptext8 9A6 0 CODE 0 text8 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__ptext9 A0A 0 CODE 0 text9 dist/default/production\Proyecto_Slave_Motor.X.production.o
+_toggle_adc 96E 0 CODE 0 text1 dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
+?___xxtofl 73 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
 __size_of_osc_config 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
+___fltol@sign1 4D 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+_antirrebote 79 0 COMMON 1 bssCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of__initialization 24 0 CODE 0 cinit dist/default/production\Proyecto_Slave_Motor.X.production.o
+___fltol@f1 44 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__end_of__initialization 32 0 CODE 0 cinit dist/default/production\Proyecto_Slave_Motor.X.production.o
 __size_of_I2C_Slave_Init 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+__end_of_ADC_config A32 0 CODE 0 text9 dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
+_ANSELbits 188 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
+_TXSTAbits 98 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _SSPCON2 91 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main 202 0 CODE 0 maintext dist/default/production\Proyecto_Slave_Motor.X.production.o
+__end_of_main A0A 0 CODE 0 maintext dist/default/production\Proyecto_Slave_Motor.X.production.o
+__end_of_temp 7F6 0 CODE 0 text2 dist/default/production\Proyecto_Slave_Motor.X.production.o
 osc_config@freq 75 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-_PORTA 5 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _PORTE 9 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+_SPBRG 99 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _SSPIE 463 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _SSPIF 63 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-_TRISA 85 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-_TRISB 86 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-_TRISC 87 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-__end_of_setup 1AE 0 CODE 0 text1 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__end_of_servo 884 0 CODE 0 text10 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__end_of_setup 900 0 CODE 0 text6 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__end_of_toggle_adc 9A6 0 CODE 0 text1 dist/default/production\Proyecto_Slave_Motor.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\Proyecto_Slave_Motor.X.production.o
-_setup 160 0 CODE 0 text1 dist/default/production\Proyecto_Slave_Motor.X.production.o
+_IOCBbits 96 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
+_servo 7F6 0 CODE 0 text10 dist/default/production\Proyecto_Slave_Motor.X.production.o
+_setup 884 0 CODE 0 text6 dist/default/production\Proyecto_Slave_Motor.X.production.o
 _SSPSTATbits 94 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\Proyecto_Slave_Motor.X.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
-_CERRADO 77 0 COMMON 1 bssCOMMON dist/default/production\Proyecto_Slave_Motor.X.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\Proyecto_Slave_Motor.X.production.o
+___xxtofl@sign 24 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+__pbssBANK0 54 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_Slave_Motor.X.production.o
+_CCP1CONbits 17 0 ABS 0 - dist/default/production\Proyecto_Slave_Motor.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -354,8 +687,9 @@ __initialization 1E 0 CODE 0 cinit dist/default/production\Proyecto_Slave_Motor.
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cstackCOMMON 1 70 70 9 1
-intentry 0 4 8 FD 2
+cstackCOMMON 1 70 70 A 1
+cstackBANK0 1 20 20 39 1
+intentry 0 4 8 515 2
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

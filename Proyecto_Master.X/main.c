@@ -1,6 +1,6 @@
 /*
  * File:   main.c
- * Author: Pablo Herrarte
+ * Author: Pablo Herrarte y Andy Bonilla
  * Ejemplo de uso de I2C Master
  * Created on 19 de agosto de 2021
  */
@@ -56,6 +56,7 @@ uint8_t UM;
 uint8_t DM;
 uint8_t CERRADO;
 uint8_t con;
+uint8_t temperatura;
 //*****************************************************************************
 // Definici n de funciones para que se puedan colocar despu s del main de lo 
 // contrario hay que colocarlos todas las funciones antes del main
@@ -71,6 +72,7 @@ void main(void) {
     setup();
     Lcd_Init(); //Inicialización de 8 bits para LCD
     while(1){
+        
         Lcd_Set_Cursor(1,1);    //Cursor en primera línea
         Lcd_Write_String(conver1()); //Escribir Día hora y minutos
         Lcd_Set_Cursor(2,1);    //Cursor en segunda línea
@@ -97,7 +99,7 @@ void main(void) {
        
         I2C_Master_Start();
         I2C_Master_Write(0x61);
-        BASURA = I2C_Master_Read(0);
+        temperatura = I2C_Master_Read(0);
         I2C_Master_Stop();
         __delay_ms(10);
         
@@ -136,19 +138,7 @@ void main(void) {
         MIN = I2C_Master_Read(0);
         I2C_Master_Stop();
         __delay_ms(10);
-        /*I2C_Master_Start();     //Escribe los minutos
-        I2C_Master_Write(0x76);
-        I2C_Master_Write(0xFA);
-        I2C_Master_Stop();
-        __delay_ms(10);
        
-        I2C_Master_Start();
-        I2C_Master_Write(0x77);
-        TEMP = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        __delay_ms(10);
-        
-        PORTA = TEMP;*/
     }
     return;
 }
@@ -169,80 +159,103 @@ void setup(void){
     I2C_Master_Init(100000);        // Inicializar Comuncaci n I2C
     
     I2C_Master_Start();     //Escritura de datos iniciales
-        I2C_Master_Write(0xD0);
-        I2C_Master_Write(0x02);
-        I2C_Master_Write(0x06);
-        I2C_Master_Stop();
-        __delay_ms(10);
-       
-        I2C_Master_Start();
-        I2C_Master_Write(0xD1);
-        BASURA = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        __delay_ms(10);
+    I2C_Master_Write(0xD0);
+    I2C_Master_Write(0x02);
+    I2C_Master_Write(0x21);
+    I2C_Master_Stop();
+    __delay_ms(10);
+    
+    I2C_Master_Start();
+    I2C_Master_Write(0xD1);
+    BASURA = I2C_Master_Read(0);
+    I2C_Master_Stop();
+    __delay_ms(10);
         
-        I2C_Master_Start();
-        I2C_Master_Write(0xD0);
-        I2C_Master_Write(0x01);
-        I2C_Master_Write(0x59);
-        I2C_Master_Stop();
-        __delay_ms(10);
+    I2C_Master_Start();
+    I2C_Master_Write(0xD0);
+    I2C_Master_Write(0x01);
+    I2C_Master_Write(0x59);
+    I2C_Master_Stop();
+    __delay_ms(10);
        
-        I2C_Master_Start();
-        I2C_Master_Write(0xD1);
-        BASURA = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        __delay_ms(10);
+    I2C_Master_Start();
+    I2C_Master_Write(0xD1);
+    BASURA = I2C_Master_Read(0);
+    I2C_Master_Stop();
+    __delay_ms(10);
         
-        I2C_Master_Start();
-        I2C_Master_Write(0xD0);
-        I2C_Master_Write(0x00);
-        I2C_Master_Write(0x58);
-        I2C_Master_Stop();
-        __delay_ms(10);
+    I2C_Master_Start();
+    I2C_Master_Write(0xD0);
+    I2C_Master_Write(0x00);
+    I2C_Master_Write(0x58);
+    I2C_Master_Stop();
+    __delay_ms(10);
        
-        I2C_Master_Start();
-        I2C_Master_Write(0xD1);
-        BASURA = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        __delay_ms(10);
+    I2C_Master_Start();
+    I2C_Master_Write(0xD1);
+    BASURA = I2C_Master_Read(0);
+    I2C_Master_Stop();
+    __delay_ms(10);
         
-        I2C_Master_Start();
-        I2C_Master_Write(0xD0);
-        I2C_Master_Write(0x03);
-        I2C_Master_Write(0x06);
-        I2C_Master_Stop();
-        __delay_ms(10);
+    I2C_Master_Start();
+    I2C_Master_Write(0xD0);
+    I2C_Master_Write(0x03);
+    I2C_Master_Write(0x06);
+    I2C_Master_Stop();
+    __delay_ms(10);
        
-        I2C_Master_Start();
-        I2C_Master_Write(0xD1);
-        BASURA = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        __delay_ms(10);
+    I2C_Master_Start();
+    I2C_Master_Write(0xD1);
+    BASURA = I2C_Master_Read(0);
+    I2C_Master_Stop();
+    __delay_ms(10);
 }
-
+//cadena de caracteres para linea 2 de lcd
 const char* conver(void){   //Datos que recivirá la LCD
-    char temporal[16];
-    temporal[0] = 0x50; //P
-    temporal[1] = 0x41; //A
-    temporal[2] = 0x52; //R
-    temporal[3] = 0x51; //Q
-    temporal[4] = 0x55; //U
-    temporal[5] = 0x45; //E
-    temporal[6] = 0x4F; //O
-    temporal[7] = 0x53; //S
-    temporal[8] = 0x3A; //:
-    temporal[9] = 0X20; //SPC
-    temporal[10] = 0x30;
-    temporal[11] = NUM; //Parqueos hábiles que recibe del PIC esclavo de parqueos
-    temporal[12] = 0x20;
-    temporal[13] = 0x20;
-    temporal[14] = 0x20;
-    temporal[15] = 0x20;
-    return temporal;
+    if (CERRADO==0){
+        char temporal[16];
+        temporal[0] = 0x50; //P
+        temporal[1] = 0x41; //A
+        temporal[2] = 0x52; //R
+        temporal[3] = 0x51; //Q
+        temporal[4] = 0x55; //U
+        temporal[5] = 0x45; //E
+        temporal[6] = 0x4F; //O
+        temporal[7] = 0x53; //S
+        temporal[8] = 0x3A; //:
+        temporal[9] = 0X20; //SPC
+        temporal[10] = 0x30;
+        temporal[11] = NUM; //Parqueos hábiles que recibe del PIC esclavo de parqueos
+        temporal[12] = 0x20;
+        temporal[13] = 0x20;
+        temporal[14] = 0x20;
+        temporal[15] = 0x20;
+        return temporal;
+    }
+    else{
+        char temporal[16];
+        temporal[0] = 0x43; //C
+        temporal[1] = 0x45; //E
+        temporal[2] = 0x52; //R
+        temporal[3] = 0x52; //R
+        temporal[4] = 0x41; //A
+        temporal[5] = 0x44; //D
+        temporal[6] = 0x4F; //O
+        temporal[7] = 0x20; //
+        temporal[8] = 0x20; //
+        temporal[9] = 0X20; //
+        temporal[10] = 0x20;
+        temporal[11] = 0x20; //
+        temporal[12] = 0x20;
+        temporal[13] = 0x20;
+        temporal[14] = 0x20;
+        temporal[15] = 0x20;
+        return temporal;
+    }
 }
-
-const char* conver1(void){
+//cadena de caracteres para linea 1 de lcd
+const char* conver1(void)
+{
     char temporal[16];
     temporal[0] = C1; //Caractéres del día
     temporal[1] = C2; 
@@ -254,15 +267,16 @@ const char* conver1(void){
     temporal[7] = 0x3A; //:
     temporal[8] = DM; //Decena de minutos
     temporal[9] = UM; //Unidad de minutos
-    temporal[10] = 0x20;
-    temporal[11] = 0x20;
-    temporal[12] = 0x20;
-    temporal[13] = 0x20;
-    temporal[14] = 0x20;
+    temporal[10] = 0x20;    
+    temporal[11] = ((temperatura/10)%10+0x30);    //temperatura decenas
+    temporal[12] = ((temperatura%10)+0x30);    //temperatura unidades
+    temporal[13] = 0xDF;    //grados
+    temporal[14] = 0x43;    //celcius
     temporal[15] = 0x20;
     return temporal;
 }
-void LECT1(void){           //Conversión de datos para mostrar en pantalla LCD
+//Conversión de datos para mostrar en pantalla LCD
+void LECT1(void){           
     NUM = num_ascii(PARKH); 
     if (DIA == 1){          //Escritura del día
         C1 = 0x4C;
@@ -304,13 +318,11 @@ void LECT1(void){           //Conversión de datos para mostrar en pantalla LCD
         DH = 0x30;
         UH = num_ascii(HORA);
         if (HORA<7){
-            PORTBbits.RB0 = 1;
-            PORTBbits.RB1 = 1;
+            PORTB = 0b00111111;
             CERRADO = 1;
         }
         else{
-            PORTBbits.RB0 = 0;
-            PORTBbits.RB1 = 0;
+            PORTB = 0;
             if (DIA!=7){
                 CERRADO = 0;
             }
@@ -324,20 +336,17 @@ void LECT1(void){           //Conversión de datos para mostrar en pantalla LCD
             CERRADO = 0;
         }
         if (con>7){
-            PORTBbits.RB0 = 1;
-            PORTBbits.RB1 = 1;
+            PORTB = 0b00111111;
         }
         else{
-            PORTBbits.RB0 = 0;
-            PORTBbits.RB1 = 0;
+            PORTB = 0;
         }
     }
     else{
         DH = 0x32;
         con = HORA-32;
         UH = num_ascii(con);
-        PORTBbits.RB0 = 1;
-        PORTBbits.RB1 = 1;
+        PORTB = 0b00111111;
         if (con>1){
             CERRADO = 1;
         }

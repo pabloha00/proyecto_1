@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "UART_CONFIG.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,165 +6,45 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 11 "main.c"
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
+# 1 "UART_CONFIG.c" 2
+# 11 "UART_CONFIG.c"
+# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
+# 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
 
+extern double __fpnormalize(double);
 
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
 
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\xc8debug.h" 1 3
+# 13 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\xc8debug.h" 3
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+# 24 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
 
 
 
+# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 1 3
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int8_t;
 
+# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\htc.h" 1 3
 
 
 
+# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
+# 5 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\htc.h" 2 3
+# 6 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 2 3
 
 
-typedef signed int int16_t;
 
 
 
 
 
-
-
-typedef __int24 int24_t;
-
-
-
-
-
-
-
-typedef signed long int int32_t;
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint8_t;
-
-
-
-
-
-typedef unsigned int uint16_t;
-
-
-
-
-
-
-typedef __uint24 uint24_t;
-
-
-
-
-
-
-typedef unsigned long int uint32_t;
-# 88 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_least8_t;
-
-
-
-
-
-
-
-typedef signed int int_least16_t;
-# 109 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_least24_t;
-# 118 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef signed long int int_least32_t;
-# 136 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_least8_t;
-
-
-
-
-
-
-typedef unsigned int uint_least16_t;
-# 154 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_least24_t;
-
-
-
-
-
-
-
-typedef unsigned long int uint_least32_t;
-# 181 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef signed char int_fast8_t;
-
-
-
-
-
-
-typedef signed int int_fast16_t;
-# 200 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef __int24 int_fast24_t;
-
-
-
-
-
-
-
-typedef signed long int int_fast32_t;
-# 224 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef unsigned char uint_fast8_t;
-
-
-
-
-
-typedef unsigned int uint_fast16_t;
-# 240 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef __uint24 uint_fast24_t;
-
-
-
-
-
-
-typedef unsigned long int uint_fast32_t;
-# 268 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef int32_t intmax_t;
-# 282 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
-typedef uint32_t uintmax_t;
-
-
-
-
-
-
-typedef int16_t intptr_t;
-
-
-
-
-typedef uint16_t uintptr_t;
-# 32 "main.c" 2
-
+# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic_chip_select.h" 1 3
+# 723 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic_chip_select.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\proc\\pic16f887.h" 1 3
 # 44 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\proc\\pic16f887.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__at.h" 1 3
@@ -2575,46 +2455,7 @@ extern volatile __bit nW __attribute__((address(0x4A2)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x4A2)));
-# 33 "main.c" 2
-
-# 1 "./I2C.h" 1
-# 18 "./I2C.h"
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
-# 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\xc8debug.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\xc8debug.h" 3
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 24 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 1 3
-
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\htc.h" 1 3
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
-# 5 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\htc.h" 2 3
-# 6 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 2 3
-
-
-
-
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic_chip_select.h" 1 3
+# 724 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic_chip_select.h" 2 3
 # 14 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 2 3
 # 30 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 3
 #pragma intrinsic(__nop)
@@ -2647,427 +2488,33 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 18 "./I2C.h" 2
+# 11 "UART_CONFIG.c" 2
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
-# 20 "./I2C.h" 2
-# 29 "./I2C.h"
-void I2C_Master_Init(const unsigned long c);
 
+# 1 "./UART_CONFIG.h" 1
+# 13 "./UART_CONFIG.h"
+void ADC_config(void);
+# 14 "UART_CONFIG.c" 2
 
 
 
 
 
 
-void I2C_Master_Wait(void);
 
-
-
-void I2C_Master_Start(void);
-
-
-
-void I2C_Master_RepeatedStart(void);
-
-
-
-void I2C_Master_Stop(void);
-
-
-
-
-
-void I2C_Master_Write(unsigned d);
-
-
-
-
-unsigned short I2C_Master_Read(unsigned short a);
-
-
-
-void I2C_Slave_Init(uint8_t address);
-# 34 "main.c" 2
-
-# 1 "./Osc_config.h" 1
-# 14 "./Osc_config.h"
-void osc_config(uint8_t freq);
-# 35 "main.c" 2
-
-# 1 "./ASCII.h" 1
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
-# 3 "./ASCII.h" 2
-
-
-
-char num_ascii(uint8_t num);
-# 36 "main.c" 2
-
-# 1 "./LCD.h" 1
-# 23 "./LCD.h"
-void Lcd_Port(char a);
-void Lcd_Cmd(char a);
-void Lcd_Clear(void);
-void Lcd_Set_Cursor(char a, char b);
-void Lcd_Init(void);
-void Lcd_Write_Char(char a);
-void Lcd_Write_String(char *a);
-void Lcd_Shift_Right(void);
-void Lcd_Shift_Left(void);
-# 37 "main.c" 2
-
-
-
-
-
-
-uint8_t PARKH;
-uint8_t NUM;
-uint8_t BASURA;
-uint8_t DIA;
-uint8_t HORA;
-uint8_t MIN;
-uint8_t TEMP;
-uint8_t C1;
-uint8_t C2;
-uint8_t C3;
-uint8_t UH;
-uint8_t DH;
-uint8_t UM;
-uint8_t DM;
-uint8_t CERRADO;
-uint8_t con;
-uint8_t temperatura;
-
-
-
-
-void setup(void);
-void LECT1(void);
-const char* conver(void);
-const char* conver1(void);
-
-
-
-void main(void) {
-    setup();
-    Lcd_Init();
-    while(1){
-
-        Lcd_Set_Cursor(1,1);
-        Lcd_Write_String(conver1());
-        Lcd_Set_Cursor(2,1);
-        Lcd_Write_String(conver());
-        LECT1();
-
-        I2C_Master_Start();
-        I2C_Master_Write(0x50);
-        I2C_Master_Write(0);
-        I2C_Master_Stop();
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-
-        I2C_Master_Start();
-        I2C_Master_Write(0x51);
-        PARKH = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-
-        I2C_Master_Start();
-        I2C_Master_Write(0x60);
-        I2C_Master_Write(CERRADO);
-        I2C_Master_Stop();
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-
-        I2C_Master_Start();
-        I2C_Master_Write(0x61);
-        temperatura = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-
-        I2C_Master_Start();
-        I2C_Master_Write(0xD0);
-        I2C_Master_Write(0x02);
-        I2C_Master_Stop();
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-
-        I2C_Master_Start();
-        I2C_Master_Write(0xD1);
-        HORA = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-
-        I2C_Master_Start();
-        I2C_Master_Write(0xD0);
-        I2C_Master_Write(0x03);
-        I2C_Master_Stop();
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-
-        I2C_Master_Start();
-        I2C_Master_Write(0xD1);
-        DIA = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-
-        I2C_Master_Start();
-        I2C_Master_Write(0xD0);
-        I2C_Master_Write(0x01);
-        I2C_Master_Stop();
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-
-        I2C_Master_Start();
-        I2C_Master_Write(0xD1);
-        MIN = I2C_Master_Read(0);
-        I2C_Master_Stop();
-        _delay((unsigned long)((10)*(8000000/4000.0)));
-
-    }
-    return;
-}
-
-
-
-void setup(void){
-    ANSEL = 0;
-    ANSELH = 0;
-    TRISA = 0;
-    TRISB = 0;
-    TRISD = 0;
-    TRISE = 0;
-    PORTA = 0;
-    PORTB = 0;
-    PORTD = 0;
-    osc_config(8);
-    I2C_Master_Init(100000);
-
-    I2C_Master_Start();
-    I2C_Master_Write(0xD0);
-    I2C_Master_Write(0x02);
-    I2C_Master_Write(0x21);
-    I2C_Master_Stop();
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-
-    I2C_Master_Start();
-    I2C_Master_Write(0xD1);
-    BASURA = I2C_Master_Read(0);
-    I2C_Master_Stop();
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-
-    I2C_Master_Start();
-    I2C_Master_Write(0xD0);
-    I2C_Master_Write(0x01);
-    I2C_Master_Write(0x59);
-    I2C_Master_Stop();
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-
-    I2C_Master_Start();
-    I2C_Master_Write(0xD1);
-    BASURA = I2C_Master_Read(0);
-    I2C_Master_Stop();
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-
-    I2C_Master_Start();
-    I2C_Master_Write(0xD0);
-    I2C_Master_Write(0x00);
-    I2C_Master_Write(0x58);
-    I2C_Master_Stop();
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-
-    I2C_Master_Start();
-    I2C_Master_Write(0xD1);
-    BASURA = I2C_Master_Read(0);
-    I2C_Master_Stop();
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-
-    I2C_Master_Start();
-    I2C_Master_Write(0xD0);
-    I2C_Master_Write(0x03);
-    I2C_Master_Write(0x06);
-    I2C_Master_Stop();
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-
-    I2C_Master_Start();
-    I2C_Master_Write(0xD1);
-    BASURA = I2C_Master_Read(0);
-    I2C_Master_Stop();
-    _delay((unsigned long)((10)*(8000000/4000.0)));
-}
-
-const char* conver(void){
-    if (CERRADO==0){
-        char temporal[16];
-        temporal[0] = 0x50;
-        temporal[1] = 0x41;
-        temporal[2] = 0x52;
-        temporal[3] = 0x51;
-        temporal[4] = 0x55;
-        temporal[5] = 0x45;
-        temporal[6] = 0x4F;
-        temporal[7] = 0x53;
-        temporal[8] = 0x3A;
-        temporal[9] = 0X20;
-        temporal[10] = 0x30;
-        temporal[11] = NUM;
-        temporal[12] = 0x20;
-        temporal[13] = 0x20;
-        temporal[14] = 0x20;
-        temporal[15] = 0x20;
-        return temporal;
-    }
-    else{
-        char temporal[16];
-        temporal[0] = 0x43;
-        temporal[1] = 0x45;
-        temporal[2] = 0x52;
-        temporal[3] = 0x52;
-        temporal[4] = 0x41;
-        temporal[5] = 0x44;
-        temporal[6] = 0x4F;
-        temporal[7] = 0x20;
-        temporal[8] = 0x20;
-        temporal[9] = 0X20;
-        temporal[10] = 0x20;
-        temporal[11] = 0x20;
-        temporal[12] = 0x20;
-        temporal[13] = 0x20;
-        temporal[14] = 0x20;
-        temporal[15] = 0x20;
-        return temporal;
-    }
-}
-
-const char* conver1(void)
+void uart_config(void)
 {
-    char temporal[16];
-    temporal[0] = C1;
-    temporal[1] = C2;
-    temporal[2] = C3;
-    temporal[3] = 0x2E;
-    temporal[4] = 0x20;
-    temporal[5] = DH;
-    temporal[6] = UH;
-    temporal[7] = 0x3A;
-    temporal[8] = DM;
-    temporal[9] = UM;
-    temporal[10] = 0x20;
-    temporal[11] = ((temperatura/10)%10+0x30);
-    temporal[12] = ((temperatura%10)+0x30);
-    temporal[13] = 0xDF;
-    temporal[14] = 0x43;
-    temporal[15] = 0x20;
-    return temporal;
-}
 
-void LECT1(void){
-    NUM = num_ascii(PARKH);
-    if (DIA == 1){
-        C1 = 0x4C;
-        C2 = 0x75;
-        C3 = 0x6E;
-    }
-    else if(DIA == 2){
-        C1 = 0x4D;
-        C2 = 0x61;
-        C3 = 0x72;
-    }
-    else if(DIA == 3){
-        C1 = 0x4D;
-        C2 = 0x69;
-        C3 = 0x65;
-    }
-    else if (DIA == 4){
-        C1 = 0x4A;
-        C2 = 0x75;
-        C3 = 0x65;
-    }
-    else if (DIA == 5){
-        C1 = 0x56;
-        C2 = 0x69;
-        C3 = 0x65;
-    }
-    else if (DIA == 6){
-        C1 = 0x53;
-        C2 = 0x61;
-        C3 = 0x62;
-    }
-    else if (DIA == 7){
-        C1 = 0x44;
-        C2 = 0x6F;
-        C3 = 0x6D;
-        CERRADO = 1;
-    }
-    if (HORA<10){
-        DH = 0x30;
-        UH = num_ascii(HORA);
-        if (HORA<7){
-            PORTB = 0b00111111;
-            CERRADO = 1;
-        }
-        else{
-            PORTB = 0;
-            if (DIA!=7){
-                CERRADO = 0;
-            }
-        }
-    }
-    else if (HORA<26){
-        DH = 0x31;
-        con = HORA-16;
-        UH = num_ascii(con);
-        if (DIA!=7){
-            CERRADO = 0;
-        }
-        if (con>7){
-            PORTB = 0b00111111;
-        }
-        else{
-            PORTB = 0;
-        }
-    }
-    else{
-        DH = 0x32;
-        con = HORA-32;
-        UH = num_ascii(con);
-        PORTB = 0b00111111;
-        if (con>1){
-            CERRADO = 1;
-        }
-        else{
-            if (DIA!=7){
-                CERRADO = 0;
-            }
-        }
-    }
-    if (MIN<10){
-        DM = 0x30;
-        UM = num_ascii(MIN);
-    }
-    else if (MIN<26){
-        DM = 0x31;
-        con = MIN-16;
-        UM = num_ascii(con);
-    }
-    else if (MIN<42){
-        DM = 0x32;
-        con = MIN-32;
-        UM = num_ascii(con);
-    }
-    else if (MIN<58){
-        DM = 0x33;
-        con = MIN-32-16;
-        UM = num_ascii(con);
-    }
-    else if (MIN<74){
-        DM = 0x34;
-        con = MIN-64;
-        UM = num_ascii(con);
-    }
-    else if (MIN<90){
-        DM = 0x35;
-        con = MIN-64-16;
-        UM = num_ascii(con);
-    }
+    TXSTAbits.SYNC = 0;
+ TXSTAbits.BRGH = 1;
+ TXSTAbits.TX9 = 0;
+ BAUDCTLbits.BRG16 = 0;
+ SPBRGH = 0;
+ SPBRG = 25;
+
+ RCSTAbits.SPEN = 1;
+ RCSTAbits.RX9 = 0;
+ RCSTAbits.CREN = 0;
+ TXSTAbits.TXEN = 1;
 }

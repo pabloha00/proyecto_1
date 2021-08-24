@@ -2653,11 +2653,16 @@ extern __bank0 __bit __timeout;
 void osc_config(uint8_t freq);
 # 40 "main.c" 2
 
-# 1 "./I2C.h" 1
-# 20 "./I2C.h"
+# 1 "./UART_CONFIG.h" 1
+# 13 "./UART_CONFIG.h"
+void ADC_config(void);
+# 41 "main.c" 2
+
+# 1 "./ADC_CONFIG.h" 1
+# 20 "./ADC_CONFIG.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
-# 20 "./I2C.h" 2
-# 29 "./I2C.h"
+# 20 "./ADC_CONFIG.h" 2
+# 29 "./ADC_CONFIG.h"
 void I2C_Master_Init(const unsigned long c);
 
 
@@ -2694,44 +2699,68 @@ unsigned short I2C_Master_Read(unsigned short a);
 
 
 void I2C_Slave_Init(uint8_t address);
-# 41 "main.c" 2
-# 51 "main.c"
-uint8_t BASURA = 0;
-uint8_t CERRADO = 0;
-uint8_t z = 0;
+# 42 "main.c" 2
+
+# 1 "./I2C.h" 1
+# 43 "main.c" 2
+
+
+
+
+
+
+
+
+unsigned char antirrebote, botonazo;
+unsigned char conversion1, conversion_total, temperatura_aprox;
+uint8_t z = 0, motor_recibido, BASURA;
 
 
 
 void setup(void);
-
+void servo(void);
+void toggle_adc(void);
+void temp(void);
 
 
 
 void __attribute__((picinterrupt(("")))) isr(void)
 {
+
+    if (INTCONbits.RBIF)
+    {
+        if (PORTB==0b11111101)
+            antirrebote=1;
+        else
+            antirrebote=0;
+        INTCONbits.RBIF=0;
+    }
+
     if(PIR1bits.SSPIF == 1){
 
         SSPCONbits.CKP = 0;
 
         if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
-            z = SSPBUF;
+            motor_recibido = SSPBUF;
             SSPCONbits.SSPOV = 0;
             SSPCONbits.WCOL = 0;
             SSPCONbits.CKP = 1;
         }
 
-        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
-            z = SSPBUF;
+        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW)
+        {
+            motor_recibido= SSPBUF;
             PIR1bits.SSPIF = 0;
             SSPCONbits.CKP = 1;
             while(!SSPSTATbits.BF);
-            CERRADO = SSPBUF;
+            motor_recibido = SSPBUF;
             _delay((unsigned long)((200)*(8000000/4000000.0)));
 
-        }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+        }
+        else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
             z = SSPBUF;
             BF = 0;
-            SSPBUF = BASURA;
+            SSPBUF = temperatura_aprox;
             SSPCONbits.CKP = 1;
             _delay((unsigned long)((200)*(8000000/4000000.0)));
             while(SSPSTATbits.BF);
@@ -2740,21 +2769,23 @@ void __attribute__((picinterrupt(("")))) isr(void)
         PIR1bits.SSPIF = 0;
     }
 
-
 }
 
 
 
 void main(void)
 {
-
     setup();
 
     while(1)
     {
-        PORTAbits.RA0 = CERRADO;
-    }
 
+        servo();
+
+        toggle_adc();
+
+        temp();
+    }
 }
 
 
@@ -2764,27 +2795,90 @@ void setup(void)
 
     ANSEL=0;
     ANSELH=0;
+    ANSELbits.ANS0=1;
 
-    TRISA = 0;
-    TRISB = 0;
-    TRISC = 0;
-    TRISD = 0;
+    TRISDbits.TRISD0=0;
+    TRISBbits.TRISB1=1;
+    TRISCbits.TRISC2=0;
+    TRISD=0;
     TRISEbits.TRISE0=0;
 
 
-    PORTA=0;
     PORTB=0;
     PORTC=0;
     PORTD=0;
     PORTE=0;
 
     osc_config(8);
-    OPTION_REG = 0b01010111;
 
+    ADC_config();
+
+    TRISCbits.TRISC2=1;
+    CCP1CONbits.P1M = 0;
+    CCP1CONbits.CCP1M = 0b1100;
+    CCPR1L = 0x0f ;
+    CCP1CONbits.DC1B = 0;
+
+
+    OPTION_REGbits.nRBPU=0;
+    WPUBbits.WPUB1=1;
+
+    I2C_Slave_Init(0x60);
 
     INTCONbits.GIE=1;
     INTCONbits.PEIE = 1;
-    INTCONbits.RBIE=0;
+    INTCONbits.RBIE=1;
     INTCONbits.RBIF=0;
-    I2C_Slave_Init(0x60);
+    IOCBbits.IOCB1=1;
+}
+
+
+
+
+void servo(void)
+{
+
+    if (antirrebote==1 && PORTBbits.RB1==0 )
+    {
+        botonazo++;
+        antirrebote=0;
+    }
+
+    switch(botonazo)
+    {
+        case(0):
+            PORTEbits.RE0=1;
+            _delay((unsigned long)((1)*(8000000/4000.0)));
+            PORTEbits.RE0=0;
+            break;
+        case(1):
+            PORTEbits.RE0=1;
+            _delay((unsigned long)((2)*(8000000/4000.0)));
+            PORTEbits.RE0=0;
+            break;
+        case(2):
+            botonazo=0;
+            break;
+    }
+}
+
+void toggle_adc(void)
+{
+    if (ADCON0bits.GO==0)
+    {
+        conversion1=ADRESH<<8;
+        conversion_total=conversion1+ADRESL;
+        _delay((unsigned long)((1)*(8000000/4000.0)));
+        ADCON0bits.GO=1;
+    }
+}
+
+void temp(void)
+{
+    temperatura_aprox=(conversion_total/2.046);
+
+    if (temperatura_aprox>28 && temperatura_aprox <50)
+        TRISCbits.TRISC2=0;
+    else
+        TRISCbits.TRISC2=1;
 }

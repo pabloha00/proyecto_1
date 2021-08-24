@@ -3,12 +3,16 @@
 [d edition pro ]
 [d chip 16F887 ]
 [d frameptr 0 ]
+"22 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\ADC_CONFIG.c
+[v _ADC_config ADC_config `(v  1 e 1 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 "6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
@@ -17,19 +21,19 @@
 [v _I2C_Master_Wait I2C_Master_Wait `(v  1 e 1 0 ]
 "93
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
-"64 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+"63 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
-"137
+"103
 [v _main main `(v  1 e 1 0 ]
-"151
+"120
 [v _setup setup `(v  1 e 1 0 ]
+"153
+[v _infrarrojos infrarrojos `(v  1 e 1 0 ]
 "17 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
 [v _osc_config osc_config `(v  1 e 1 0 ]
-"166 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
-[v _PORTA PORTA `VEuc  1 e 1 @5 ]
-"228
+"228 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc/pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-[s S54 . 1 `uc 1 RB0 1 0 :1:0 
+[s S269 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -39,13 +43,11 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "245
-[u S63 . 1 `S54 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES63  1 e 1 @6 ]
-"290
-[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[u S278 . 1 `S269 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES278  1 e 1 @6 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S75 . 1 `uc 1 RD0 1 0 :1:0 
+[s S290 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -55,28 +57,11 @@
 `uc 1 RD7 1 0 :1:7 
 ]
 "369
-[u S84 . 1 `S75 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES84  1 e 1 @8 ]
+[u S299 . 1 `S290 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES299  1 e 1 @8 ]
 "414
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S22 . 1 `uc 1 RBIF 1 0 :1:0 
-`uc 1 INTF 1 0 :1:1 
-`uc 1 T0IF 1 0 :1:2 
-`uc 1 RBIE 1 0 :1:3 
-`uc 1 INTE 1 0 :1:4 
-`uc 1 T0IE 1 0 :1:5 
-`uc 1 PEIE 1 0 :1:6 
-`uc 1 GIE 1 0 :1:7 
-]
-"482
-[s S31 . 1 `uc 1 . 1 0 :2:0 
-`uc 1 TMR0IF 1 0 :1:2 
-`uc 1 . 1 0 :2:3 
-`uc 1 TMR0IE 1 0 :1:5 
-]
-[u S36 . 1 `S22 1 . 1 0 `S31 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES36  1 e 1 @11 ]
-[s S96 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S22 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -85,43 +70,86 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "553
-[u S104 . 1 `S96 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES104  1 e 1 @12 ]
+[u S30 . 1 `S22 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES30  1 e 1 @12 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
-[s S115 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S41 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "870
-[s S121 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S47 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S126 . 1 `S115 1 . 1 0 `S121 1 . 1 0 ]
-[v _SSPCONbits SSPCONbits `VES126  1 e 1 @20 ]
-"1346
-[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
-"1416
-[v _TRISA TRISA `VEuc  1 e 1 @133 ]
-"1478
-[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+[u S52 . 1 `S41 1 . 1 0 `S47 1 . 1 0 ]
+[v _SSPCONbits SSPCONbits `VES52  1 e 1 @20 ]
+"1238
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+[s S311 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1276
+[s S316 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S325 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S328 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S331 . 1 `S311 1 . 1 0 `S316 1 . 1 0 `S325 1 . 1 0 `S328 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES331  1 e 1 @31 ]
+[s S195 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1433
+[u S204 . 1 `S195 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES204  1 e 1 @133 ]
+[s S216 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1495
+[u S225 . 1 `S216 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES225  1 e 1 @134 ]
 "1540
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-[s S248 . 1 `uc 1 TRISE0 1 0 :1:0 
+[s S237 . 1 `uc 1 TRISE0 1 0 :1:0 
 `uc 1 TRISE1 1 0 :1:1 
 `uc 1 TRISE2 1 0 :1:2 
 `uc 1 TRISE3 1 0 :1:3 
 ]
 "1677
-[u S253 . 1 `S248 1 . 1 0 ]
-[v _TRISEbits TRISEbits `VES253  1 e 1 @137 ]
-[s S142 . 1 `uc 1 BF 1 0 :1:0 
+[u S242 . 1 `S237 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES242  1 e 1 @137 ]
+[s S68 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -131,76 +159,62 @@
 `uc 1 SMP 1 0 :1:7 
 ]
 "2231
-[s S151 . 1 `uc 1 . 1 0 :2:0 
+[s S77 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S156 . 1 `uc 1 . 1 0 :2:0 
+[s S82 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DATA 1 0 :1:5 
 ]
-[s S162 . 1 `uc 1 . 1 0 :2:0 
+[s S88 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S167 . 1 `uc 1 . 1 0 :2:0 
+[s S93 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S172 . 1 `uc 1 . 1 0 :2:0 
+[s S98 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S177 . 1 `uc 1 . 1 0 :2:0 
+[s S103 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[u S182 . 1 `S142 1 . 1 0 `S151 1 . 1 0 `S156 1 . 1 0 `S162 1 . 1 0 `S167 1 . 1 0 `S172 1 . 1 0 `S177 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES182  1 e 1 @148 ]
-[s S297 . 1 `uc 1 WPUB 1 0 :8:0 
-]
-"2366
-[s S299 . 1 `uc 1 WPUB0 1 0 :1:0 
-`uc 1 WPUB1 1 0 :1:1 
-`uc 1 WPUB2 1 0 :1:2 
-`uc 1 WPUB3 1 0 :1:3 
-`uc 1 WPUB4 1 0 :1:4 
-`uc 1 WPUB5 1 0 :1:5 
-`uc 1 WPUB6 1 0 :1:6 
-`uc 1 WPUB7 1 0 :1:7 
-]
-[u S308 . 1 `S297 1 . 1 0 `S299 1 . 1 0 ]
-[v _WPUBbits WPUBbits `VES308  1 e 1 @149 ]
-[s S271 . 1 `uc 1 IOCB 1 0 :8:0 
-]
-"2436
-[s S273 . 1 `uc 1 IOCB0 1 0 :1:0 
-`uc 1 IOCB1 1 0 :1:1 
-`uc 1 IOCB2 1 0 :1:2 
-`uc 1 IOCB3 1 0 :1:3 
-`uc 1 IOCB4 1 0 :1:4 
-`uc 1 IOCB5 1 0 :1:5 
-`uc 1 IOCB6 1 0 :1:6 
-`uc 1 IOCB7 1 0 :1:7 
-]
-[u S282 . 1 `S271 1 . 1 0 `S273 1 . 1 0 ]
-[v _IOCBbits IOCBbits `VES282  1 e 1 @150 ]
+[u S108 . 1 `S68 1 . 1 0 `S77 1 . 1 0 `S82 1 . 1 0 `S88 1 . 1 0 `S93 1 . 1 0 `S98 1 . 1 0 `S103 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES108  1 e 1 @148 ]
+"2970
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
+[s S174 . 1 `uc 1 ANS0 1 0 :1:0 
+`uc 1 ANS1 1 0 :1:1 
+`uc 1 ANS2 1 0 :1:2 
+`uc 1 ANS3 1 0 :1:3 
+`uc 1 ANS4 1 0 :1:4 
+`uc 1 ANS5 1 0 :1:5 
+`uc 1 ANS6 1 0 :1:6 
+`uc 1 ANS7 1 0 :1:7 
+]
+"3404
+[u S183 . 1 `S174 1 . 1 0 ]
+[v _ANSELbits ANSELbits `VES183  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
 "3641
 [v _BF BF `VEb  1 e 0 @1184 ]
 "850 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
-[s S446 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S492 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -210,25 +224,25 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S455 . 1 `S446 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES455  1 e 1 @135 ]
-[s S409 . 1 `uc 1 SCS 1 0 :1:0 
+[u S501 . 1 `S492 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES501  1 e 1 @135 ]
+[s S455 . 1 `uc 1 SCS 1 0 :1:0 
 `uc 1 LTS 1 0 :1:1 
 `uc 1 HTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 ]
 "1882
-[s S415 . 1 `uc 1 . 1 0 :4:0 
+[s S461 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S420 . 1 `S409 1 . 1 0 `S415 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES420  1 e 1 @143 ]
+[u S466 . 1 `S455 1 . 1 0 `S461 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES466  1 e 1 @143 ]
 "1979
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
-[s S467 . 1 `uc 1 SEN 1 0 :1:0 
+[s S513 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -238,12 +252,21 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "1996
-[u S476 . 1 `S467 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES476  1 e 1 @145 ]
+[u S522 . 1 `S513 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES522  1 e 1 @145 ]
 "2048
 [v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S571 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 ADFM 1 0 :1:7 
+]
+"2991
+[u S577 . 1 `S571 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES577  1 e 1 @159 ]
 "3896
 [v _GIE GIE `VEb  1 e 0 @95 ]
 "4040
@@ -257,29 +280,32 @@
 "4460
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
 "52 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
-[v _PARQUEO PARQUEO `uc  1 e 1 0 ]
+[v _infrarrojo1 infrarrojo1 `uc  1 e 1 0 ]
+[v _infrarrojo2 infrarrojo2 `uc  1 e 1 0 ]
+[v _infrarrojo3 infrarrojo3 `uc  1 e 1 0 ]
+[v _suma_ir suma_ir `uc  1 e 1 0 ]
 "53
-[v _z z `uc  1 e 1 0 ]
+[v _conversion1 conversion1 `f  1 e 4 0 ]
+[v _conversion_total conversion_total `f  1 e 4 0 ]
 "54
-[v _cc cc `uc  1 e 1 0 ]
-"55
+[v _abierto_cerrado abierto_cerrado `uc  1 e 1 0 ]
 [v _BASURA BASURA `uc  1 e 1 0 ]
-"137
+"103
 [v _main main `(v  1 e 1 0 ]
 {
-"147
+"116
 } 0
-"151
+"120
 [v _setup setup `(v  1 e 1 0 ]
 {
-"206
+"148
 } 0
 "17 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\Osc_config.c
 [v _osc_config osc_config `(v  1 e 1 0 ]
 {
 [v osc_config@freq freq `uc  1 a 1 wreg ]
 [v osc_config@freq freq `uc  1 a 1 wreg ]
-[v osc_config@freq freq `uc  1 a 1 5 ]
+[v osc_config@freq freq `uc  1 a 1 2 ]
 "43
 } 0
 "93 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\I2C.c
@@ -288,11 +314,21 @@
 [v I2C_Slave_Init@address address `uc  1 a 1 wreg ]
 [v I2C_Slave_Init@address address `uc  1 a 1 wreg ]
 "95
-[v I2C_Slave_Init@address address `uc  1 a 1 3 ]
+[v I2C_Slave_Init@address address `uc  1 a 1 0 ]
 "105
 } 0
-"64 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+"22 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\ADC_CONFIG.c
+[v _ADC_config ADC_config `(v  1 e 1 0 ]
+{
+"33
+} 0
+"153 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
+[v _infrarrojos infrarrojos `(v  1 e 1 0 ]
+{
+"196
+} 0
+"63
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"133
+"99
 } 0

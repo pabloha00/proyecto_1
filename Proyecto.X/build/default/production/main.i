@@ -2653,6 +2653,11 @@ extern __bank0 __bit __timeout;
 void osc_config(uint8_t freq);
 # 40 "main.c" 2
 
+# 1 "./ADC_CONFIG.h" 1
+# 13 "./ADC_CONFIG.h"
+void ADC_config(void);
+# 41 "main.c" 2
+
 # 1 "./I2C.h" 1
 # 20 "./I2C.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
@@ -2694,81 +2699,48 @@ unsigned short I2C_Master_Read(unsigned short a);
 
 
 void I2C_Slave_Init(uint8_t address);
-# 41 "main.c" 2
+# 42 "main.c" 2
 # 51 "main.c"
 unsigned char antirrebote;
-uint8_t PARQUEO = 0;
-uint8_t z = 0;
-uint8_t cc = 0;
-uint8_t BASURA = 0;
+unsigned char infrarrojo1, infrarrojo2, infrarrojo3, suma_ir;
+float conversion1, conversion_total, temperatura_aprox;
+uint8_t abierto_cerrado, BASURA, PARQUEO;
 
 
 
 void setup(void);
-
+void infrarrojos(void);
 
 
 
 void __attribute__((picinterrupt(("")))) isr(void)
 {
 
-    if (INTCONbits.RBIF)
-    {
-        INTCONbits.RBIF = 0;
-        cc=0;
-        if (PORTBbits.RB0 == 0)
-        {
-            PORTDbits.RD0 = 1;
-        }
-        if (PORTBbits.RB0 == 1)
-        {
-            cc++;
-            PORTDbits.RD0 = 0;
-        }
-        if (PORTBbits.RB1 == 0)
-        {
-            PORTDbits.RD1 = 1;
-        }
-        if(PORTBbits.RB1 == 1)
-        {
-            cc++;
-            PORTDbits.RD1 = 0;
-        }
-        if (PORTBbits.RB2 == 0)
-        {
-            PORTDbits.RD2 = 1;
-        }
-        if (PORTBbits.RB2 == 1)
-        {
-            cc++;
-            PORTDbits.RD2 = 0;
-        }
-        PARQUEO = cc;
-        cc = 0;
-    }
     if(PIR1bits.SSPIF == 1){
 
         SSPCONbits.CKP = 0;
 
         if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
-            z = SSPBUF;
+            abierto_cerrado = SSPBUF;
             SSPCONbits.SSPOV = 0;
             SSPCONbits.WCOL = 0;
             SSPCONbits.CKP = 1;
         }
 
-        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW) {
-            z = SSPBUF;
+        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW)
+        {
+            abierto_cerrado = SSPBUF;
             PIR1bits.SSPIF = 0;
             SSPCONbits.CKP = 1;
             while(!SSPSTATbits.BF);
             BASURA = SSPBUF;
             _delay((unsigned long)((200)*(8000000/4000000.0)));
 
-        }else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
-            z = SSPBUF;
+        }
+        else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
+            abierto_cerrado = SSPBUF;
             BF = 0;
-            SSPBUF = PARQUEO;
+            SSPBUF = suma_ir;
             SSPCONbits.CKP = 1;
             _delay((unsigned long)((200)*(8000000/4000000.0)));
             while(SSPSTATbits.BF);
@@ -2776,7 +2748,6 @@ void __attribute__((picinterrupt(("")))) isr(void)
 
         PIR1bits.SSPIF = 0;
     }
-
 
 }
 
@@ -2790,6 +2761,9 @@ void main(void)
     while(1)
     {
 
+
+        infrarrojos();
+
     }
 
 }
@@ -2801,54 +2775,86 @@ void setup(void)
 
     ANSEL=0;
     ANSELH=0;
+    ANSELbits.ANS0=1;
 
-    TRISA = 0;
-    TRISB = 0b00000111;
-    TRISC = 0;
-    TRISD = 0;
+    TRISAbits.TRISA0=1;
+    TRISBbits.TRISB1=1;
+    TRISBbits.TRISB2=1;
+    TRISBbits.TRISB3=1;
     TRISEbits.TRISE0=0;
+    TRISEbits.TRISE1=0;
+    TRISC=0;
+    TRISD=0;
 
-
-    PORTA=0;
     PORTB=0;
-    PORTC=0;
     PORTD=0;
     PORTE=0;
 
     osc_config(8);
 
-    IOCBbits.IOCB0 = 1;
-    IOCBbits.IOCB1 = 1;
-    IOCBbits.IOCB2 = 1;
-    WPUBbits.WPUB0 = 0;
-    WPUBbits.WPUB1 = 0;
-    WPUBbits.WPUB2 = 0;
-    OPTION_REG = 0b01010111;
+    ADC_config();
 
-
-
-    INTCONbits.GIE=1;
-    INTCONbits.PEIE = 1;
-    INTCONbits.RBIE=1;
-    INTCONbits.RBIF=0;
-    PARQUEO = 0;
     I2C_Slave_Init(0x50);
-    PORTD = ~PORTB;
-    if (PORTB==1 || PORTB==2 || PORTB==4){
-        PARQUEO = 1;
+
+
+
+}
+
+
+
+
+void infrarrojos(void)
+{
+
+    if (PORTBbits.RB1==1)
+    {
+        PORTDbits.RD0=1;
+        PORTDbits.RD1=0;
+        infrarrojo1=1;
     }
-    else if(PORTB==3 || PORTB==5 || PORTB==6){
-        PARQUEO = 2;
+    if (PORTBbits.RB1==0)
+    {
+        PORTDbits.RD0=0;
+        PORTDbits.RD1=1;
+        infrarrojo1=0;
     }
-    else if(PORTB==7){
-        PARQUEO = 3;
+
+    if (PORTBbits.RB2==1)
+    {
+        PORTDbits.RD2=1;
+        PORTDbits.RD3=0;
+        infrarrojo2=1;
     }
-    else if(PORTB==0){
-        PARQUEO = 0;
+    if (PORTBbits.RB2==0)
+    {
+        PORTDbits.RD2=0;
+        PORTDbits.RD3=1;
+        infrarrojo2=0;
     }
-    PORTDbits.RD3 = 0;
-    PORTDbits.RD4 = 0;
-    PORTDbits.RD5 = 0;
-    PORTDbits.RD6 = 0;
-    PORTDbits.RD7 = 0;
+
+    if (PORTBbits.RB3==1)
+    {
+        PORTDbits.RD4=1;
+        PORTDbits.RD5=0;
+        infrarrojo3=1;
+    }
+    if (PORTBbits.RB3==0)
+    {
+        PORTDbits.RD4=0;
+        PORTDbits.RD5=1;
+        infrarrojo3=0;
+    }
+    suma_ir=infrarrojo1+infrarrojo2+infrarrojo3;
+
+}
+
+void toggle_adc(void)
+{
+    if (ADCON0bits.GO==0)
+    {
+        conversion1=ADRESH<<8;
+        conversion_total=conversion1+ADRESL;
+        _delay((unsigned long)((1)*(8000000/4000.0)));
+        ADCON0bits.GO=1;
+    }
 }

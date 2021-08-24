@@ -6,6 +6,8 @@
                    projectFiles="true">
       <itemPath>I2C.h</itemPath>
       <itemPath>Osc_config.h</itemPath>
+      <itemPath>ADC_CONFIG.h</itemPath>
+      <itemPath>UART_CONFIG.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -17,6 +19,8 @@
       <itemPath>I2C.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>Osc_config.c</itemPath>
+      <itemPath>ADC_CONFIG.c</itemPath>
+      <itemPath>UART_CONFIG.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
