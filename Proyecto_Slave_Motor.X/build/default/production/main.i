@@ -2726,10 +2726,12 @@ void __attribute__((picinterrupt(("")))) isr(void)
 
     if (INTCONbits.RBIF)
     {
-        if (PORTB==0b11111101)
+        if (PORTB==0b11111101){
             antirrebote=1;
-        else
+        }
+        else{
             antirrebote=0;
+        }
         INTCONbits.RBIF=0;
     }
 
@@ -2837,8 +2839,6 @@ void servo(void)
 
     if (antirrebote==1 && PORTBbits.RB1==0 && motor_recibido==0)
     {
-        botonazo++;
-        antirrebote=0;
 
     switch(botonazo)
     {
@@ -2846,16 +2846,16 @@ void servo(void)
             PORTEbits.RE0=1;
             _delay((unsigned long)((1)*(8000000/4000.0)));
             PORTEbits.RE0=0;
+            botonazo=1;
             break;
         case(1):
             PORTEbits.RE0=1;
             _delay((unsigned long)((2)*(8000000/4000.0)));
             PORTEbits.RE0=0;
-            break;
-        case(2):
-            botonazo=0;
+            botonazo = 0;
             break;
     }
+    antirrebote=0;
     }
     else if(motor_recibido==1){
         PORTEbits.RE0=1;

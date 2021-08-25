@@ -27,11 +27,11 @@
 [v _I2C_Slave_Init I2C_Slave_Init `(v  1 e 1 0 ]
 "63 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
-"112
+"114
 [v _main main `(v  1 e 1 0 ]
-"129
+"131
 [v _setup setup `(v  1 e 1 0 ]
-"174
+"176
 [v _servo servo `(v  1 e 1 0 ]
 "206
 [v _toggle_adc toggle_adc `(v  1 e 1 0 ]
@@ -372,10 +372,10 @@
 "52
 [v _z z `uc  1 e 1 0 ]
 [v _motor_recibido motor_recibido `uc  1 e 1 0 ]
-"112
+"114
 [v _main main `(v  1 e 1 0 ]
 {
-"125
+"127
 } 0
 "206
 [v _toggle_adc toggle_adc `(v  1 e 1 0 ]
@@ -432,10 +432,10 @@
 [v ___fldiv@b b `d  1 p 4 14 ]
 "185
 } 0
-"129 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+"131 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"169
+"171
 } 0
 "17 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\Osc_config.c
 [v _osc_config osc_config `(v  1 e 1 0 ]
@@ -459,7 +459,7 @@
 {
 "33
 } 0
-"174 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
+"176 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Slave_Motor.X\main.c
 [v _servo servo `(v  1 e 1 0 ]
 {
 "204
@@ -467,5 +467,5 @@
 "63
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"108
+"110
 } 0

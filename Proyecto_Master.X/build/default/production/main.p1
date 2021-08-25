@@ -626,8 +626,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 163:     I2C_Master_Write(0x02);
 [e ( _I2C_Master_Write (1 -> -> 2 `i `ui ]
 "164
-[; ;main.c: 164:     I2C_Master_Write(0x21);
-[e ( _I2C_Master_Write (1 -> -> 33 `i `ui ]
+[; ;main.c: 164:     I2C_Master_Write(0x06);
+[e ( _I2C_Master_Write (1 -> -> 6 `i `ui ]
 "165
 [; ;main.c: 165:     I2C_Master_Stop();
 [e ( _I2C_Master_Stop ..  ]

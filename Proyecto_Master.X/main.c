@@ -161,7 +161,7 @@ void setup(void){
     I2C_Master_Start();     //Escritura de datos iniciales
     I2C_Master_Write(0xD0);
     I2C_Master_Write(0x02);
-    I2C_Master_Write(0x21);
+    I2C_Master_Write(0x06);
     I2C_Master_Stop();
     __delay_ms(10);
     

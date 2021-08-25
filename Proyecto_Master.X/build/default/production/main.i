@@ -2846,7 +2846,7 @@ void setup(void){
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
     I2C_Master_Write(0x02);
-    I2C_Master_Write(0x21);
+    I2C_Master_Write(0x06);
     I2C_Master_Stop();
     _delay((unsigned long)((10)*(8000000/4000.0)));
 

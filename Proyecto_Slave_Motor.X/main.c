@@ -65,10 +65,12 @@ void __interrupt() isr(void) //funcion de interrupciones
     //-------INTERRUPCION POR BOTONAZO
     if (INTCONbits.RBIF)
     {
-        if (PORTB==0b11111101)
-            antirrebote=1;
-        else
+        if (PORTB==0b11111101){
+            antirrebote=1;   
+        }
+        else{
             antirrebote=0;
+        }
         INTCONbits.RBIF=0;
     }
     //-------INTERRUPCION POR I2C
@@ -176,8 +178,6 @@ void servo(void)
     //-------ANTIRREBOTE DE BOTON PARA MOVER MOTOR
     if (antirrebote==1 && PORTBbits.RB1==0 && motor_recibido==0)
     {
-        botonazo++;
-        antirrebote=0;
         //-------FUNCIONAMIENTO DE SERVO DE TALANQUERA
     switch(botonazo)
     {
@@ -185,16 +185,16 @@ void servo(void)
             PORTEbits.RE0=1;
             __delay_ms(1);
             PORTEbits.RE0=0;
+            botonazo=1;
             break;
         case(1):                //servo en posicion 90°
             PORTEbits.RE0=1;    
             __delay_ms(2);
             PORTEbits.RE0=0;
-            break;
-        case(2):
-            botonazo=0;         //regresa a posicion 0°
+            botonazo = 0;
             break;
     }
+    antirrebote=0;
     }
     else if(motor_recibido==1){
         PORTEbits.RE0=1;

@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\user\AppData\Local\Temp\xcAs9u0.o
+$C:\Users\user\AppData\Local\Temp\xcAsggs.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Proyecto_Master.X.production.o
@@ -88,16 +88,16 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Proyecto_Master.X.production.o
-7F3 cinit CODE >1142:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-7F3 cinit CODE >1145:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-7F3 cinit CODE >1219:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-7F4 cinit CODE >1220:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-7F5 cinit CODE >1221:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-7F6 cinit CODE >1222:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-7F7 cinit CODE >1223:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-7FC cinit CODE >1229:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-7FC cinit CODE >1231:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-7FD cinit CODE >1232:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
+7F3 cinit CODE >1142:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+7F3 cinit CODE >1145:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+7F3 cinit CODE >1219:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+7F4 cinit CODE >1220:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+7F5 cinit CODE >1221:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+7F6 cinit CODE >1222:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+7F7 cinit CODE >1223:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+7FC cinit CODE >1229:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+7FC cinit CODE >1231:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+7FD cinit CODE >1232:C:\Users\user\AppData\Local\Temp\xcAsggs.s
 72 text21 CODE >3:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\ASCII.c
 73 text21 CODE >4:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\ASCII.c
 74 text21 CODE >6:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\ASCII.c
@@ -593,16 +593,16 @@ D text2 CODE >27:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\P
 7D1 maintext CODE >138:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\main.c
 7DF maintext CODE >139:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\main.c
 7E4 maintext CODE >140:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\main.c
-F17 clrtext CODE >1206:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-F17 clrtext CODE >1207:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-F18 clrtext CODE >1208:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-F18 clrtext CODE >1209:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-F19 clrtext CODE >1210:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-F1A clrtext CODE >1211:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-F1B clrtext CODE >1212:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-F1C clrtext CODE >1213:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-F1D clrtext CODE >1214:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
-F1E clrtext CODE >1215:C:\Users\user\AppData\Local\Temp\xcAs9u0.s
+F17 clrtext CODE >1206:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+F17 clrtext CODE >1207:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+F18 clrtext CODE >1208:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+F18 clrtext CODE >1209:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+F19 clrtext CODE >1210:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+F1A clrtext CODE >1211:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+F1B clrtext CODE >1212:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+F1C clrtext CODE >1213:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+F1D clrtext CODE >1214:C:\Users\user\AppData\Local\Temp\xcAsggs.s
+F1E clrtext CODE >1215:C:\Users\user\AppData\Local\Temp\xcAsggs.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -638,11 +638,11 @@ __end_of_Lcd_Port 1E2E 0 CODE 0 text19 dist/default/production\Proyecto_Master.X
 __Hstrings 0 0 ABS 0 strings -
 _HORA 4E 0 BANK0 1 bssBANK0 dist/default/production\Proyecto_Master.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAs9u0.o
+___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAsggs.o
 _main C32 0 CODE 0 maintext dist/default/production\Proyecto_Master.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
 _Lcd_Write_Char 1E90 0 CODE 0 text15 dist/default/production\Proyecto_Master.X.production.o
-start 0 0 CODE 0 init C:\Users\user\AppData\Local\Temp\xcAs9u0.o
+start 0 0 CODE 0 init C:\Users\user\AppData\Local\Temp\xcAsggs.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
@@ -652,12 +652,12 @@ conver@temporal 20 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Master
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 21 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Master.X.production.o
 I2C_Master_Read@a 70 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_Master.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs9u0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs9u0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs9u0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs9u0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs9u0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs9u0.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsggs.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsggs.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsggs.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsggs.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsggs.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAsggs.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -676,8 +676,8 @@ __end_of___awdiv 3B2 0 CODE 0 text12 dist/default/production\Proyecto_Master.X.p
 __end_of___awmod 218 0 CODE 0 text11 dist/default/production\Proyecto_Master.X.production.o
 __end_of___lldiv 2E4 0 CODE 0 text9 dist/default/production\Proyecto_Master.X.production.o
 __end_of_conver 5B6 0 CODE 0 text13 dist/default/production\Proyecto_Master.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAs9u0.o
-___stacklo 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAs9u0.o
+___stackhi 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAsggs.o
+___stacklo 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAsggs.o
 __size_of_LECT1 0 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
 Lcd_Set_Cursor@temp 77 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_Master.X.production.o
@@ -699,7 +699,7 @@ __size_of_num_ascii 0 0 ABS 0 - dist/default/production\Proyecto_Master.X.produc
 _TRISC3 43B 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
 __size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAs9u0.o
+___int_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAsggs.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -756,7 +756,7 @@ ___lldiv@divisor 70 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_Mas
 __size_of_Lcd_Write_String 0 0 ABS 0 - dist/default/production\Proyecto_Master.X.production.o
 Lcd_Write_String@a 76 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_Master.X.production.o
 Lcd_Write_String@i 74 0 COMMON 1 cstackCOMMON dist/default/production\Proyecto_Master.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\user\AppData\Local\Temp\xcAs9u0.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\user\AppData\Local\Temp\xcAsggs.o
 __end_of_Lcd_Cmd 1EE8 0 CODE 0 text18 dist/default/production\Proyecto_Master.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 ___awmod@counter 20 0 BANK0 1 cstackBANK0 dist/default/production\Proyecto_Master.X.production.o

@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\user\AppData\Local\Temp\xcAs8c8.o
+$C:\Users\user\AppData\Local\Temp\xcAs7k0.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -76,33 +76,33 @@ STRING 163-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Proyecto.X.production.o
-F cinit CODE >978:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-F cinit CODE >981:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-F cinit CODE >1025:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-10 cinit CODE >1026:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-11 cinit CODE >1027:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-12 cinit CODE >1028:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-13 cinit CODE >1029:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-14 cinit CODE >1030:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-15 cinit CODE >1031:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-16 cinit CODE >1032:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-17 cinit CODE >1035:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-18 cinit CODE >1036:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-19 cinit CODE >1037:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-1A cinit CODE >1038:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-1B cinit CODE >1039:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-1C cinit CODE >1040:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-1D cinit CODE >1041:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-1E cinit CODE >1042:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-1F cinit CODE >1043:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-20 cinit CODE >1044:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-21 cinit CODE >1045:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-22 cinit CODE >1046:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-23 cinit CODE >1047:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-24 cinit CODE >1048:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-25 cinit CODE >1054:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-25 cinit CODE >1056:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
-26 cinit CODE >1057:C:\Users\user\AppData\Local\Temp\xcAs8c8.s
+F cinit CODE >978:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+F cinit CODE >981:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+F cinit CODE >1025:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+10 cinit CODE >1026:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+11 cinit CODE >1027:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+12 cinit CODE >1028:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+13 cinit CODE >1029:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+14 cinit CODE >1030:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+15 cinit CODE >1031:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+16 cinit CODE >1032:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+17 cinit CODE >1035:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+18 cinit CODE >1036:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+19 cinit CODE >1037:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+1A cinit CODE >1038:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+1B cinit CODE >1039:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+1C cinit CODE >1040:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+1D cinit CODE >1041:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+1E cinit CODE >1042:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+1F cinit CODE >1043:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+20 cinit CODE >1044:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+21 cinit CODE >1045:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+22 cinit CODE >1046:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+23 cinit CODE >1047:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+24 cinit CODE >1048:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+25 cinit CODE >1054:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+25 cinit CODE >1056:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
+26 cinit CODE >1057:C:\Users\user\AppData\Local\Temp\xcAs7k0.s
 4 intentry CODE >63:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
 29 text6 CODE >63:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
 29 text6 CODE >66:C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto.X\main.c
@@ -246,19 +246,19 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _BF 4A0 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\Proyecto.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAs8c8.o
+___sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAs7k0.o
 _main 2AA 0 CODE 0 maintext dist/default/production\Proyecto.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Proyecto.X.production.o
-start 18 0 CODE 0 init C:\Users\user\AppData\Local\Temp\xcAs8c8.o
+start 18 0 CODE 0 init C:\Users\user\AppData\Local\Temp\xcAs7k0.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs8c8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs8c8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs8c8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs8c8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs8c8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs8c8.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs7k0.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs7k0.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs7k0.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs7k0.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs7k0.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\user\AppData\Local\Temp\xcAs7k0.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Proyecto.X.production.o
@@ -274,8 +274,8 @@ _SSPCONbits 14 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 _conversion1 28 0 BANK0 1 bssBANK0 dist/default/production\Proyecto.X.production.o
 _conversion_total 24 0 BANK0 1 bssBANK0 dist/default/production\Proyecto.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAs8c8.o
-___stacklo 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAs8c8.o
+___stackhi 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAs7k0.o
+___stacklo 0 0 ABS 0 - C:\Users\user\AppData\Local\Temp\xcAs7k0.o
 _I2C_Slave_Init 246 0 CODE 0 text3 dist/default/production\Proyecto.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\Proyecto.X.production.o
@@ -290,7 +290,7 @@ _SSPBUF 13 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\Proyecto.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAs8c8.o
+___int_sp 0 0 STACK 2 stack C:\Users\user\AppData\Local\Temp\xcAs7k0.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -338,7 +338,7 @@ __end_of_osc_config 18A 0 CODE 0 text2 dist/default/production\Proyecto.X.produc
 saved_w 7E 0 ABS 0 - dist/default/production\Proyecto.X.production.o
 __end_of_isr 118 0 CODE 0 text6 dist/default/production\Proyecto.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\user\AppData\Local\Temp\xcAs8c8.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\user\AppData\Local\Temp\xcAs7k0.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __pmaintext 2AA 0 CODE 0 maintext dist/default/production\Proyecto.X.production.o
 __Lcommon 0 0 ABS 0 common -
