@@ -40,6 +40,7 @@ Descripcion:
 #include "Osc_config.h"
 #include "ADC_CONFIG.h"
 #include "I2C.h"
+#include "UART.h"
 /*-----------------------------------------------------------------------------
  ----------------------- VARIABLES A IMPLEMTENTAR------------------------------
  -----------------------------------------------------------------------------*/
@@ -48,7 +49,7 @@ Descripcion:
 #define _XTAL_FREQ 8000000
 
 //-------VARIABLES DE PROGRAMA
-unsigned char antirrebote;
+unsigned char antirrebote, cuenta_uart;
 unsigned char infrarrojo1, infrarrojo2, infrarrojo3, suma_ir;
 float conversion1, conversion_total, temperatura_aprox;
 uint8_t abierto_cerrado, BASURA, PARQUEO; 
@@ -57,6 +58,7 @@ uint8_t abierto_cerrado, BASURA, PARQUEO;
  -----------------------------------------------------------------------------*/
 void setup(void);
 void infrarrojos(void);
+void mandar_datos(void);
 /*-----------------------------------------------------------------------------
  --------------------------- INTERRUPCIONES -----------------------------------
  -----------------------------------------------------------------------------*/
@@ -95,6 +97,12 @@ void __interrupt() isr(void) //funcion de interrupciones
        
         PIR1bits.SSPIF = 0;    
     }
+    if (PIR1bits.TXIF)
+    {
+        cuenta_uart++;      //se suma variable guia
+        mandar_datos();     //invoco funcion para mandar uart
+        PIR1bits.TXIF=0;    //apago interrupcion
+    }
    
 }
 /*-----------------------------------------------------------------------------
@@ -122,29 +130,35 @@ void setup(void)
     //-------CONFIGURACION ENTRADAS ANALOGICAS
     ANSEL=0;
     ANSELH=0;
-    ANSELbits.ANS0=1;                   //entrada analogica de sensor temperatura
     //-------CONFIGURACION IN/OUT
-    TRISAbits.TRISA0=1;                 //entrada de sensor temperatura
+    //SALIDAS PARA LEDS DE DISPONIBILIDAD
+    TRISAbits.TRISA0=0;                 //salida para led verde1
+    TRISAbits.TRISA1=0;                 //salida para led rojo1
+    TRISAbits.TRISA2=0;                 //salida para led verde2
+    TRISAbits.TRISA3=0;                 //salida para led rojo2
+    TRISAbits.TRISA4=0;                 //salida para led verde3
+    TRISAbits.TRISA5=0;                 //salida para led rojo3
+    //ENTRADAS PARA SENSORES
     TRISBbits.TRISB1=1;                 //entrada de sensor IR1
     TRISBbits.TRISB2=1;                 //entrada de sensor IR2
     TRISBbits.TRISB3=1;                 //entrada de sensor IR3
-    TRISEbits.TRISE0=0;                 //salida para led verde
-    TRISEbits.TRISE1=0;                 //salida para led rojo
-    TRISC=0;
-    TRISD=0;
+    
     //-------LIMPIEZA DE PUERTOS
+    PORTA=0;
     PORTB=0;
     PORTD=0;
     PORTE=0;
     //-------CONFIGURACION DE RELOJ A 4MHz
     osc_config(8);
     //-------CONFIGURACION DE ADC
-    ADC_config();
+    uart_config();
     //-------CONFIGURACION DE COMUNICACION I2C
     I2C_Slave_Init(0x50);   //se da direccion 0x50
     //-------CONFIGURACION DE INTERRUPCIONES
-    
-    
+    //-------CONFIGURACION DE INTERRUPCIONES
+    INTCONbits.GIE=1;           //se habilita interrupciones globales
+    INTCONbits.PEIE=1;          //habilitan interrupciones por perifericos
+    PIE1bits.TXIE=1;            //enable interrupcion de tx uart    
 }
 /*-----------------------------------------------------------------------------
  --------------------------------- FUNCIONES ----------------------------------
@@ -155,55 +169,76 @@ void infrarrojos(void)
     //-------PARQUEO 1
     if (PORTBbits.RB1==1)
     {
-        PORTDbits.RD0=1;
-        PORTDbits.RD1=0;
+        PORTAbits.RA0=1;
+        PORTAbits.RA1=0;
         infrarrojo1=1;
     }
     if (PORTBbits.RB1==0)
     {
-        PORTDbits.RD0=0;
-        PORTDbits.RD1=1;
+        PORTAbits.RA0=0;
+        PORTAbits.RA1=1;
         infrarrojo1=0;
     }
     //-------PARQUEO2
     if (PORTBbits.RB2==1)
     {
-        PORTDbits.RD2=1;
-        PORTDbits.RD3=0;
+        PORTAbits.RA2=1;
+        PORTAbits.RA3=0;
         infrarrojo2=1;
     }
     if (PORTBbits.RB2==0)
     {
-        PORTDbits.RD2=0;
-        PORTDbits.RD3=1;
+        PORTAbits.RA2=0;
+        PORTAbits.RA3=1;
         infrarrojo2=0;
     }
     //-------PARQUEO3
     if (PORTBbits.RB3==1)
     {
-        PORTDbits.RD4=1;
-        PORTDbits.RD5=0;
+        PORTAbits.RA4=1;
+        PORTAbits.RA5=0;
         infrarrojo3=1;
     }
     if (PORTBbits.RB3==0)
     {
-        PORTDbits.RD4=0;
-        PORTDbits.RD5=1;
+        PORTAbits.RA4=0;
+        PORTAbits.RA5=1;
         infrarrojo3=0;
     }
     suma_ir=infrarrojo1+infrarrojo2+infrarrojo3; //suma de los parqueos disponibles
    
 }
 //-------FUNCION PARA CONVERSION DEL ADC
-void toggle_adc(void)
-{
-    if (ADCON0bits.GO==0)
-    {
-        conversion1=ADRESH<<8;                  //toma los MSB del ADRE
-        conversion_total=conversion1+ADRESL;    //le suma los LSB
-        __delay_ms(1);                          //tiempo de carga
-        ADCON0bits.GO=1;
-    }
-}
 
-//-------FUNCION PARA MAPEO DE TEMPERATURA  
+void mandar_datos(void)
+{
+    switch(cuenta_uart)
+    {
+        case(1):
+            TXREG=(suma_ir+0x30);
+            break;
+        case(2):
+            TXREG=44;
+            break;
+        case(3):
+            TXREG=infrarrojo1+0x30;
+            break;
+        case(4):
+            TXREG=44;
+            break;
+        case(5):
+            TXREG=infrarrojo2+0x30;
+            break;
+        case(6):
+            TXREG=44;
+            break;
+        case(7):
+            TXREG=infrarrojo3+0x30;
+            break;
+        case(8):
+            TXREG=10;               //separador de coma
+            cuenta_uart=0;            
+            break;
+    }
+    
+}

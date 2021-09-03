@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.32 build 20210201212658 
-                                                                                               Tue Aug 24 20:16:10 2021
+                                                                                               Sat Aug 28 22:57:55 2021
 
 Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1 
      1                           	processor	16F887
@@ -1517,8 +1517,8 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1503  0311  120A  158A  2731  120A  118A  	fcall	_I2C_Master_Write
   1504  0316                     l1862:
   1505                           
-  1506                           ;main.c: 164:     I2C_Master_Write(0x06);
-  1507  0316  3006               	movlw	6
+  1506                           ;main.c: 164:     I2C_Master_Write(0x12);
+  1507  0316  3012               	movlw	18
   1508  0317  00F0               	movwf	I2C_Master_Write@d
   1509  0318  3000               	movlw	0
   1510  0319  00F1               	movwf	I2C_Master_Write@d+1
@@ -1608,8 +1608,8 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   1594  036D  120A  158A  2731  120A  118A  	fcall	_I2C_Master_Write
   1595  0372                     l1884:
   1596                           
-  1597                           ;main.c: 177:     I2C_Master_Write(0x59);
-  1598  0372  3059               	movlw	89
+  1597                           ;main.c: 177:     I2C_Master_Write(0x09);
+  1598  0372  3009               	movlw	9
   1599  0373  00F0               	movwf	I2C_Master_Write@d
   1600  0374  3000               	movlw	0
   1601  0375  00F1               	movwf	I2C_Master_Write@d+1
@@ -3434,7 +3434,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3415  0F8D                     __ptext14:	
   3416 ;; *************** function _Lcd_Write_String *****************
   3417 ;; Defined at:
-  3418 ;;		line 54 in file "LCD.c"
+  3418 ;;		line 56 in file "LCD.c"
   3419 ;; Parameters:    Size  Location     Type
   3420 ;;  a               1    wreg     PTR unsigned char 
   3421 ;;		 -> conver1@temporal(16), conver@temporal_196(16), conver@temporal(16), 
@@ -3475,13 +3475,13 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3456  0F8D  00F6               	movwf	Lcd_Write_String@a
   3457  0F8E                     l1966:
   3458                           
-  3459                           ;LCD.c: 55:     int i;;LCD.c: 56:     for (i = 0; a[i] != '\0'; i++)
+  3459                           ;LCD.c: 57:     int i;;LCD.c: 58:     for (i = 0; a[i] != '\0'; i++)
   3460  0F8E  01F4               	clrf	Lcd_Write_String@i
   3461  0F8F  01F5               	clrf	Lcd_Write_String@i+1
   3462  0F90  2FA2               	goto	l1972
   3463  0F91                     l1968:
   3464                           
-  3465                           ;LCD.c: 57:         Lcd_Write_Char(a[i]);
+  3465                           ;LCD.c: 59:         Lcd_Write_Char(a[i]);
   3466  0F91  0874               	movf	Lcd_Write_String@i,w
   3467  0F92  0776               	addwf	Lcd_Write_String@a,w
   3468  0F93  00F3               	movwf	??_Lcd_Write_String
@@ -3518,7 +3518,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3499  0F48                     __ptext15:	
   3500 ;; *************** function _Lcd_Write_Char *****************
   3501 ;; Defined at:
-  3502 ;;		line 45 in file "LCD.c"
+  3502 ;;		line 47 in file "LCD.c"
   3503 ;; Parameters:    Size  Location     Type
   3504 ;;  a               1    wreg     unsigned char 
   3505 ;; Auto vars:     Size  Location     Type
@@ -3556,26 +3556,26 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3537  0F48  00F2               	movwf	Lcd_Write_Char@a
   3538  0F49                     l1756:
   3539                           
-  3540                           ;LCD.c: 46:     Lcd_Port(a);
+  3540                           ;LCD.c: 48:     Lcd_Port(a);
   3541  0F49  0872               	movf	Lcd_Write_Char@a,w
   3542  0F4A  120A  158A  2711  120A  158A  	fcall	_Lcd_Port
   3543  0F4F                     l1758:
   3544                           
-  3545                           ;LCD.c: 47:     PORTEbits.RE1 = 1;
+  3545                           ;LCD.c: 49:     PORTEbits.RE1 = 1;
   3546  0F4F  1283               	bcf	3,5	;RP0=0, select bank0
   3547  0F50  1303               	bcf	3,6	;RP1=0, select bank0
   3548  0F51  1489               	bsf	9,1	;volatile
   3549  0F52                     l1760:
   3550                           
-  3551                           ;LCD.c: 48:     PORTEbits.RE2 = 0;
+  3551                           ;LCD.c: 50:     PORTEbits.RE2 = 0;
   3552  0F52  1109               	bcf	9,2	;volatile
   3553  0F53                     l1762:
   3554                           
-  3555                           ;LCD.c: 49:     PORTEbits.RE0 = 1;
+  3555                           ;LCD.c: 51:     PORTEbits.RE0 = 1;
   3556  0F53  1409               	bsf	9,0	;volatile
   3557  0F54                     l1764:
   3558                           
-  3559                           ;LCD.c: 50:     _delay((unsigned long)((40)*(4000000/4000000.0)));
+  3559                           ;LCD.c: 52:     _delay((unsigned long)((40)*(4000000/4000000.0)));
   3560  0F54  300D               	movlw	13
   3561  0F55  00F1               	movwf	??_Lcd_Write_Char
   3562  0F56                     u1297:
@@ -3583,7 +3583,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3564  0F57  2F56               	goto	u1297
   3565  0F58                     l1766:
   3566                           
-  3567                           ;LCD.c: 51:     PORTEbits.RE0 = 0;
+  3567                           ;LCD.c: 53:     PORTEbits.RE0 = 0;
   3568  0F58  1283               	bcf	3,5	;RP0=0, select bank0
   3569  0F59  1303               	bcf	3,6	;RP1=0, select bank0
   3570  0F5A  1009               	bcf	9,0	;volatile
@@ -3635,7 +3635,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3616  0FAE  00F6               	movwf	Lcd_Set_Cursor@a
   3617  0FAF                     l1946:
   3618                           
-  3619                           ;LCD.c: 21:     char temp;;LCD.c: 22:     if (a == 1) {
+  3619                           ;LCD.c: 21:     char temp;;LCD.c: 22:     if (a == 1)
   3620  0FAF  0376               	decf	Lcd_Set_Cursor@a,w
   3621  0FB0  1D03               	btfss	3,2
   3622  0FB1  2FB3               	goto	u861
@@ -3645,7 +3645,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3626  0FB4                     u860:
   3627  0FB4                     l1948:
   3628                           
-  3629                           ;LCD.c: 23:         temp = 0x80 + b - 1;
+  3629                           ;LCD.c: 23:     {;LCD.c: 24:         temp = 0x80 + b - 1;
   3630  0FB4  0874               	movf	Lcd_Set_Cursor@b,w
   3631  0FB5  3E7F               	addlw	127
   3632  0FB6  00F5               	movwf	??_Lcd_Set_Cursor
@@ -3653,11 +3653,11 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3634  0FB8  00F7               	movwf	Lcd_Set_Cursor@temp
   3635  0FB9                     l1950:
   3636                           
-  3637                           ;LCD.c: 24:         Lcd_Cmd(temp);
+  3637                           ;LCD.c: 25:         Lcd_Cmd(temp);
   3638  0FB9  0877               	movf	Lcd_Set_Cursor@temp,w
   3639  0FBA  120A  158A  275C  120A  158A  	fcall	_Lcd_Cmd
   3640                           
-  3641                           ;LCD.c: 25:     } else if (a == 2) {
+  3641                           ;LCD.c: 26:     }
   3642  0FBF  2FD1               	goto	l228
   3643  0FC0                     l1952:
   3644  0FC0  3002               	movlw	2
@@ -3670,7 +3670,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3651  0FC6                     u870:
   3652  0FC6                     l1954:
   3653                           
-  3654                           ;LCD.c: 26:         temp = 0xC0 + b - 1;
+  3654                           ;LCD.c: 28:         temp = 0xC0 + b - 1;
   3655  0FC6  0874               	movf	Lcd_Set_Cursor@b,w
   3656  0FC7  3EBF               	addlw	191
   3657  0FC8  00F5               	movwf	??_Lcd_Set_Cursor
@@ -3678,7 +3678,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3659  0FCA  00F7               	movwf	Lcd_Set_Cursor@temp
   3660  0FCB                     l1956:
   3661                           
-  3662                           ;LCD.c: 27:         Lcd_Cmd(temp);
+  3662                           ;LCD.c: 29:         Lcd_Cmd(temp);
   3663  0FCB  0877               	movf	Lcd_Set_Cursor@temp,w
   3664  0FCC  120A  158A  275C  120A  158A  	fcall	_Lcd_Cmd
   3665  0FD1                     l228:
@@ -3689,7 +3689,7 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3670  0F74                     __ptext17:	
   3671 ;; *************** function _Lcd_Init *****************
   3672 ;; Defined at:
-  3673 ;;		line 31 in file "LCD.c"
+  3673 ;;		line 33 in file "LCD.c"
   3674 ;; Parameters:    Size  Location     Type
   3675 ;;		None
   3676 ;; Auto vars:     Size  Location     Type
@@ -3725,19 +3725,19 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3706                           ; Regs used in _Lcd_Init: [wreg+status,2+status,0+pclath+cstack]
   3707                           
   3708                           
-  3709                           ;LCD.c: 39:     Lcd_Cmd(0x38);
+  3709                           ;LCD.c: 41:     Lcd_Cmd(0x38);
   3710  0F74  3038               	movlw	56
   3711  0F75  120A  158A  275C  120A  158A  	fcall	_Lcd_Cmd
   3712                           
-  3713                           ;LCD.c: 40:     Lcd_Cmd(0x06);
+  3713                           ;LCD.c: 42:     Lcd_Cmd(0x06);
   3714  0F7A  3006               	movlw	6
   3715  0F7B  120A  158A  275C  120A  158A  	fcall	_Lcd_Cmd
   3716                           
-  3717                           ;LCD.c: 41:     Lcd_Cmd(0x0c);
+  3717                           ;LCD.c: 43:     Lcd_Cmd(0x0c);
   3718  0F80  300C               	movlw	12
   3719  0F81  120A  158A  275C  120A  158A  	fcall	_Lcd_Cmd
   3720                           
-  3721                           ;LCD.c: 42:     Lcd_Cmd(0x80);
+  3721                           ;LCD.c: 44:     Lcd_Cmd(0x80);
   3722  0F86  3080               	movlw	128
   3723  0F87  120A  158A  275C  120A  158A  	fcall	_Lcd_Cmd
   3724  0F8C                     l231:
@@ -3871,11 +3871,11 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   3852  0F11  00F0               	movwf	Lcd_Port@a
   3853  0F12                     l1576:
   3854                           
-  3855                           ;LCD.c: 4:     PORTD = a;
+  3855                           ;LCD.c: 4:     PORTB = a;
   3856  0F12  0870               	movf	Lcd_Port@a,w
   3857  0F13  1283               	bcf	3,5	;RP0=0, select bank0
   3858  0F14  1303               	bcf	3,6	;RP1=0, select bank0
-  3859  0F15  0088               	movwf	8	;volatile
+  3859  0F15  0086               	movwf	6	;volatile
   3860  0F16                     l216:
   3861  0F16  0008               	return
   3862  0F17                     __end_of_Lcd_Port:
@@ -4193,9 +4193,9 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   4174  051D                     u980:
   4175  051D                     l2024:
   4176                           
-  4177                           ;main.c: 321:             PORTB = 0b00111111;
+  4177                           ;main.c: 321:             PORTA = 0b00111111;
   4178  051D  303F               	movlw	63
-  4179  051E  0086               	movwf	6	;volatile
+  4179  051E  0085               	movwf	5	;volatile
   4180  051F                     l2026:
   4181                           
   4182                           ;main.c: 322:             CERRADO = 1;
@@ -4206,8 +4206,8 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   4187  0521  2D7B               	goto	l2068
   4188  0522                     l2028:
   4189                           
-  4190                           ;main.c: 325:             PORTB = 0;
-  4191  0522  0186               	clrf	6	;volatile
+  4190                           ;main.c: 325:             PORTA = 0;
+  4191  0522  0185               	clrf	5	;volatile
   4192  0523                     l2030:
   4193                           
   4194                           ;main.c: 326:             if (DIA!=7){
@@ -4286,16 +4286,16 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   4267  0552                     u1020:
   4268  0552                     l2048:
   4269                           
-  4270                           ;main.c: 339:             PORTB = 0b00111111;
+  4270                           ;main.c: 339:             PORTA = 0b00111111;
   4271  0552  303F               	movlw	63
-  4272  0553  0086               	movwf	6	;volatile
+  4272  0553  0085               	movwf	5	;volatile
   4273                           
   4274                           ;main.c: 340:         }
   4275  0554  2D7B               	goto	l2068
   4276  0555                     l2050:
   4277                           
-  4278                           ;main.c: 342:             PORTB = 0;
-  4279  0555  0186               	clrf	6	;volatile
+  4278                           ;main.c: 342:             PORTA = 0;
+  4279  0555  0185               	clrf	5	;volatile
   4280  0556  2D7B               	goto	l2068
   4281  0557                     l2052:
   4282                           
@@ -4324,9 +4324,9 @@ Microchip MPLAB XC8 C Compiler v2.32 (Free license) build 20210201212658 Og1
   4305  056A  00C8               	movwf	_UH
   4306  056B                     l2058:
   4307                           
-  4308                           ;main.c: 349:         PORTB = 0b00111111;
+  4308                           ;main.c: 349:         PORTA = 0b00111111;
   4309  056B  303F               	movlw	63
-  4310  056C  0086               	movwf	6	;volatile
+  4310  056C  0085               	movwf	5	;volatile
   4311  056D                     l2060:
   4312                           
   4313                           ;main.c: 350:         if (con>1){
@@ -4993,7 +4993,7 @@ DATA                 0      0      41      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.32 build 20210201212658 
-Symbol Table                                                                                   Tue Aug 24 20:16:10 2021
+Symbol Table                                                                                   Sat Aug 28 22:57:55 2021
 
                        _C1 004B                         _C2 004A                         _C3 0049  
                        l32 0F3B                         l50 0FF7                         l35 0F47  

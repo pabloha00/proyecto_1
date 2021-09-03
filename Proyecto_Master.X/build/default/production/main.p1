@@ -626,8 +626,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 163:     I2C_Master_Write(0x02);
 [e ( _I2C_Master_Write (1 -> -> 2 `i `ui ]
 "164
-[; ;main.c: 164:     I2C_Master_Write(0x06);
-[e ( _I2C_Master_Write (1 -> -> 6 `i `ui ]
+[; ;main.c: 164:     I2C_Master_Write(0x12);
+[e ( _I2C_Master_Write (1 -> -> 18 `i `ui ]
 "165
 [; ;main.c: 165:     I2C_Master_Stop();
 [e ( _I2C_Master_Stop ..  ]
@@ -659,8 +659,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 176:     I2C_Master_Write(0x01);
 [e ( _I2C_Master_Write (1 -> -> 1 `i `ui ]
 "177
-[; ;main.c: 177:     I2C_Master_Write(0x59);
-[e ( _I2C_Master_Write (1 -> -> 89 `i `ui ]
+[; ;main.c: 177:     I2C_Master_Write(0x09);
+[e ( _I2C_Master_Write (1 -> -> 9 `i `ui ]
 "178
 [; ;main.c: 178:     I2C_Master_Stop();
 [e ( _I2C_Master_Stop ..  ]
@@ -1113,8 +1113,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! < -> _HORA `i -> 7 `i 162  ]
 {
 "321
-[; ;main.c: 321:             PORTB = 0b00111111;
-[e = _PORTB -> -> 63 `i `uc ]
+[; ;main.c: 321:             PORTA = 0b00111111;
+[e = _PORTA -> -> 63 `i `uc ]
 "322
 [; ;main.c: 322:             CERRADO = 1;
 [e = _CERRADO -> -> 1 `i `uc ]
@@ -1127,8 +1127,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 162 ]
 {
 "325
-[; ;main.c: 325:             PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 325:             PORTA = 0;
+[e = _PORTA -> -> 0 `i `uc ]
 "326
 [; ;main.c: 326:             if (DIA!=7){
 [e $ ! != -> _DIA `i -> 7 `i 164  ]
@@ -1178,8 +1178,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! > -> _con `i -> 7 `i 168  ]
 {
 "339
-[; ;main.c: 339:             PORTB = 0b00111111;
-[e = _PORTB -> -> 63 `i `uc ]
+[; ;main.c: 339:             PORTA = 0b00111111;
+[e = _PORTA -> -> 63 `i `uc ]
 "340
 [; ;main.c: 340:         }
 }
@@ -1189,8 +1189,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 168 ]
 {
 "342
-[; ;main.c: 342:             PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;main.c: 342:             PORTA = 0;
+[e = _PORTA -> -> 0 `i `uc ]
 "343
 [; ;main.c: 343:         }
 }
@@ -1213,8 +1213,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 348:         UH = num_ascii(con);
 [e = _UH -> ( _num_ascii (1 _con `uc ]
 "349
-[; ;main.c: 349:         PORTB = 0b00111111;
-[e = _PORTB -> -> 63 `i `uc ]
+[; ;main.c: 349:         PORTA = 0b00111111;
+[e = _PORTA -> -> 63 `i `uc ]
 "350
 [; ;main.c: 350:         if (con>1){
 [e $ ! > -> _con `i -> 1 `i 171  ]

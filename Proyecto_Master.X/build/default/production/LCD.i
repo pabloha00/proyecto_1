@@ -2508,7 +2508,7 @@ void Lcd_Shift_Left(void);
 
 
 void Lcd_Port(char a) {
-    PORTD = a;
+    PORTB = a;
 }
 
 void Lcd_Cmd(char a) {
@@ -2526,10 +2526,12 @@ void Lcd_Clear(void) {
 
 void Lcd_Set_Cursor(char a, char b) {
     char temp;
-    if (a == 1) {
+    if (a == 1)
+    {
         temp = 0x80 + b - 1;
         Lcd_Cmd(temp);
-    } else if (a == 2) {
+    }
+    else if (a == 2) {
         temp = 0xC0 + b - 1;
         Lcd_Cmd(temp);
     }

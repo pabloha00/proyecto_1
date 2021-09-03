@@ -37,11 +37,11 @@
 [v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
 "20
 [v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
-"31
+"33
 [v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
-"45
+"47
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
-"54
+"56
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
 "71 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\main.c
 [v _main main `(v  1 e 1 0 ]
@@ -279,25 +279,25 @@
 [v conver@temporal temporal `[16]uc  1 a 16 0 ]
 "255
 } 0
-"54 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\LCD.c
+"56 C:\Users\user\OneDrive\Documentos\GitHub\Proyecto1\proyecto_1\Proyecto_Master.X\LCD.c
 [v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
 {
 [v Lcd_Write_String@a a `*.4uc  1 a 1 wreg ]
-"55
+"57
 [v Lcd_Write_String@i i `i  1 a 2 4 ]
-"54
-[v Lcd_Write_String@a a `*.4uc  1 a 1 wreg ]
 "56
-[v Lcd_Write_String@a a `*.4uc  1 a 1 6 ]
+[v Lcd_Write_String@a a `*.4uc  1 a 1 wreg ]
 "58
+[v Lcd_Write_String@a a `*.4uc  1 a 1 6 ]
+"60
 } 0
-"45
+"47
 [v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
 {
 [v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
 [v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
 [v Lcd_Write_Char@a a `uc  1 a 1 2 ]
-"52
+"54
 } 0
 "20
 [v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
@@ -310,12 +310,12 @@
 [v Lcd_Set_Cursor@b b `uc  1 p 1 4 ]
 "22
 [v Lcd_Set_Cursor@a a `uc  1 a 1 6 ]
-"29
-} 0
 "31
+} 0
+"33
 [v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
 {
-"43
+"45
 } 0
 "7
 [v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]

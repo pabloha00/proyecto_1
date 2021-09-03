@@ -2846,7 +2846,7 @@ void setup(void){
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
     I2C_Master_Write(0x02);
-    I2C_Master_Write(0x06);
+    I2C_Master_Write(0x12);
     I2C_Master_Stop();
     _delay((unsigned long)((10)*(8000000/4000.0)));
 
@@ -2859,7 +2859,7 @@ void setup(void){
     I2C_Master_Start();
     I2C_Master_Write(0xD0);
     I2C_Master_Write(0x01);
-    I2C_Master_Write(0x59);
+    I2C_Master_Write(0x09);
     I2C_Master_Stop();
     _delay((unsigned long)((10)*(8000000/4000.0)));
 
@@ -3003,11 +3003,11 @@ void LECT1(void){
         DH = 0x30;
         UH = num_ascii(HORA);
         if (HORA<7){
-            PORTB = 0b00111111;
+            PORTA = 0b00111111;
             CERRADO = 1;
         }
         else{
-            PORTB = 0;
+            PORTA = 0;
             if (DIA!=7){
                 CERRADO = 0;
             }
@@ -3021,17 +3021,17 @@ void LECT1(void){
             CERRADO = 0;
         }
         if (con>7){
-            PORTB = 0b00111111;
+            PORTA = 0b00111111;
         }
         else{
-            PORTB = 0;
+            PORTA = 0;
         }
     }
     else{
         DH = 0x32;
         con = HORA-32;
         UH = num_ascii(con);
-        PORTB = 0b00111111;
+        PORTA = 0b00111111;
         if (con>1){
             CERRADO = 1;
         }

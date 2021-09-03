@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "UART.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,30 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 15 "main.c"
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-
-
-
-
-
+# 1 "UART.c" 2
+# 11 "UART.c"
+# 1 "./UART.h" 1
+# 11 "./UART.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
 typedef signed char int8_t;
@@ -163,8 +143,45 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 36 "main.c" 2
+# 11 "./UART.h" 2
 
+# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
+# 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\xc8debug.h" 1 3
+# 13 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\xc8debug.h" 3
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+# 24 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
+
+
+
+# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 1 3
+
+
+
+
+# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\htc.h" 1 3
+
+
+
+# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
+# 5 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\htc.h" 2 3
+# 6 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 2 3
+
+
+
+
+
+
+
+# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic_chip_select.h" 1 3
+# 723 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic_chip_select.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\proc\\pic16f887.h" 1 3
 # 44 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\proc\\pic16f887.h" 3
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\__at.h" 1 3
@@ -2575,44 +2592,7 @@ extern volatile __bit nW __attribute__((address(0x4A2)));
 
 
 extern volatile __bit nWRITE __attribute__((address(0x4A2)));
-# 37 "main.c" 2
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
-# 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\xc8debug.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\xc8debug.h" 3
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 24 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 1 3
-
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\htc.h" 1 3
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
-# 5 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\htc.h" 2 3
-# 6 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 2 3
-
-
-
-
-
-
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic_chip_select.h" 1 3
+# 724 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic_chip_select.h" 2 3
 # 14 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 2 3
 # 30 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\pic.h" 3
 #pragma intrinsic(__nop)
@@ -2645,265 +2625,31 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 38 "main.c" 2
-
-
-# 1 "./Osc_config.h" 1
-# 14 "./Osc_config.h"
-void osc_config(uint8_t freq);
-# 40 "main.c" 2
-
-# 1 "./ADC_CONFIG.h" 1
-# 13 "./ADC_CONFIG.h"
-void ADC_config(void);
-# 41 "main.c" 2
-
-# 1 "./I2C.h" 1
-# 20 "./I2C.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
-# 20 "./I2C.h" 2
-# 29 "./I2C.h"
-void I2C_Master_Init(const unsigned long c);
-
-
-
-
-
-
-
-void I2C_Master_Wait(void);
-
-
-
-void I2C_Master_Start(void);
-
-
-
-void I2C_Master_RepeatedStart(void);
-
-
-
-void I2C_Master_Stop(void);
-
-
-
-
-
-void I2C_Master_Write(unsigned d);
-
-
-
-
-unsigned short I2C_Master_Read(unsigned short a);
-
-
-
-void I2C_Slave_Init(uint8_t address);
-# 42 "main.c" 2
-
-# 1 "./UART.h" 1
-# 11 "./UART.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
-# 11 "./UART.h" 2
-
+# 12 "./UART.h" 2
 
 
 
 
 
 void uart_config(void);
-# 43 "main.c" 2
-# 52 "main.c"
-unsigned char antirrebote, cuenta_uart;
-unsigned char infrarrojo1, infrarrojo2, infrarrojo3, suma_ir;
-float conversion1, conversion_total, temperatura_aprox;
-uint8_t abierto_cerrado, BASURA, PARQUEO;
+# 11 "UART.c" 2
 
 
 
-void setup(void);
-void infrarrojos(void);
-void mandar_datos(void);
 
 
-
-void __attribute__((picinterrupt(("")))) isr(void)
+void uart_config(void)
 {
 
-    if(PIR1bits.SSPIF == 1){
+    TXSTAbits.SYNC = 0;
+ TXSTAbits.BRGH = 1;
+ TXSTAbits.TX9 = 0;
+ BAUDCTLbits.BRG16 = 0;
+ SPBRGH = 0;
+ SPBRG = 51;
 
-        SSPCONbits.CKP = 0;
-
-        if ((SSPCONbits.SSPOV) || (SSPCONbits.WCOL)){
-            abierto_cerrado = SSPBUF;
-            SSPCONbits.SSPOV = 0;
-            SSPCONbits.WCOL = 0;
-            SSPCONbits.CKP = 1;
-        }
-
-        if(!SSPSTATbits.D_nA && !SSPSTATbits.R_nW)
-        {
-            abierto_cerrado = SSPBUF;
-            PIR1bits.SSPIF = 0;
-            SSPCONbits.CKP = 1;
-            while(!SSPSTATbits.BF);
-            BASURA = SSPBUF;
-            _delay((unsigned long)((200)*(8000000/4000000.0)));
-
-        }
-        else if(!SSPSTATbits.D_nA && SSPSTATbits.R_nW){
-            abierto_cerrado = SSPBUF;
-            BF = 0;
-            SSPBUF = suma_ir;
-            SSPCONbits.CKP = 1;
-            _delay((unsigned long)((200)*(8000000/4000000.0)));
-            while(SSPSTATbits.BF);
-        }
-
-        PIR1bits.SSPIF = 0;
-    }
-    if (PIR1bits.TXIF)
-    {
-        cuenta_uart++;
-        mandar_datos();
-        PIR1bits.TXIF=0;
-    }
-
-}
-
-
-
-void main(void)
-{
-
-    setup();
-
-    while(1)
-    {
-
-
-        infrarrojos();
-
-    }
-
-}
-
-
-
-void setup(void)
-{
-
-    ANSEL=0;
-    ANSELH=0;
-
-
-    TRISAbits.TRISA0=0;
-    TRISAbits.TRISA1=0;
-    TRISAbits.TRISA2=0;
-    TRISAbits.TRISA3=0;
-    TRISAbits.TRISA4=0;
-    TRISAbits.TRISA5=0;
-
-    TRISBbits.TRISB1=1;
-    TRISBbits.TRISB2=1;
-    TRISBbits.TRISB3=1;
-
-
-    PORTA=0;
-    PORTB=0;
-    PORTD=0;
-    PORTE=0;
-
-    osc_config(8);
-
-    uart_config();
-
-    I2C_Slave_Init(0x50);
-
-
-    INTCONbits.GIE=1;
-    INTCONbits.PEIE=1;
-    PIE1bits.TXIE=1;
-}
-
-
-
-
-void infrarrojos(void)
-{
-
-    if (PORTBbits.RB1==1)
-    {
-        PORTAbits.RA0=1;
-        PORTAbits.RA1=0;
-        infrarrojo1=1;
-    }
-    if (PORTBbits.RB1==0)
-    {
-        PORTAbits.RA0=0;
-        PORTAbits.RA1=1;
-        infrarrojo1=0;
-    }
-
-    if (PORTBbits.RB2==1)
-    {
-        PORTAbits.RA2=1;
-        PORTAbits.RA3=0;
-        infrarrojo2=1;
-    }
-    if (PORTBbits.RB2==0)
-    {
-        PORTAbits.RA2=0;
-        PORTAbits.RA3=1;
-        infrarrojo2=0;
-    }
-
-    if (PORTBbits.RB3==1)
-    {
-        PORTAbits.RA4=1;
-        PORTAbits.RA5=0;
-        infrarrojo3=1;
-    }
-    if (PORTBbits.RB3==0)
-    {
-        PORTAbits.RA4=0;
-        PORTAbits.RA5=1;
-        infrarrojo3=0;
-    }
-    suma_ir=infrarrojo1+infrarrojo2+infrarrojo3;
-
-}
-
-
-void mandar_datos(void)
-{
-    switch(cuenta_uart)
-    {
-        case(1):
-            TXREG=(suma_ir+0x30);
-            break;
-        case(2):
-            TXREG=44;
-            break;
-        case(3):
-            TXREG=infrarrojo1+0x30;
-            break;
-        case(4):
-            TXREG=44;
-            break;
-        case(5):
-            TXREG=infrarrojo2+0x30;
-            break;
-        case(6):
-            TXREG=44;
-            break;
-        case(7):
-            TXREG=infrarrojo3+0x30;
-            break;
-        case(8):
-            TXREG=10;
-            cuenta_uart=0;
-            break;
-    }
-
+ RCSTAbits.SPEN = 1;
+ RCSTAbits.RX9 = 0;
+ RCSTAbits.CREN = 0;
+ TXSTAbits.TXEN = 1;
 }
